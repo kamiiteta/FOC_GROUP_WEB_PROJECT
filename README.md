@@ -58,7 +58,27 @@ The project demonstrates our understanding of web development concepts such as p
 ## Project Structure
 
 ```text
-
+FOC_GROUP_WEB_PROJECT/
+├── index.html                  # Main homepage for Trinity Health Services
+├── README.md                   # Project documentation
+└── assets/                     # Project assets directory
+    ├── css/                    # Custom stylesheets
+    │   ├── afghanistan.css     # Styling for the Afghanistan page
+    │   ├── index.css           # Styling for the main homepage
+    │   ├── kenya.css           # Styling for the Kenya page
+    │   ├── pakistan.css        # Styling for the Pakistan page
+    │   └── tanzania.css        # Styling for the Tanzania page
+    ├── images/                 # Image assets
+    │   ├── emergency.png       # Emergency services card banner image
+    │   └── walraven.jpg        # Portrait of Director Dr. Gijs Walraven
+    ├── js/                     # Client-side JavaScript
+    │   └── tanzania.js         # Interactive search/tabs for the Tanzania page
+    └── pages/                  # Regional healthcare HTML pages
+        ├── afghanistan.html    # Health services details in Afghanistan
+        ├── kenya.html          # Regional priorities and hospitals in Kenya
+        ├── pakistan.html       # Healthcare initiatives in Pakistan
+        ├── tanzania.html       # Healthcare structure and facilities directory in Tanzania
+        └── university.html     # Information portal for Trinity University
 ```
 
 ## Installation and Usage
@@ -97,4 +117,3 @@ We acknowledge the course instructor and the Fundamentals of Computing departmen
 ## Disclaimer
 
 This project was created strictly for educational purposes. The recreated website is not intended for commercial use, and all trademarks, logos, and content belong to their respective owners.
-x
