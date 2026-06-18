@@ -15,9 +15,12 @@
     --shadow: 0 10px 30px -5px rgba(3, 36, 69, 0.1), 0 4px 12px -5px rgba(3, 36, 69, 0.05);
 }
 .main {
-    background: linear-gradient(135deg, var(--primary-color)0%, #314c8f 100%);
+    background: linear-gradient(135deg, var(--primary-color) 0%, #314c8f 100%);
     background-size: cover;
-   
+    border-radius: 3rem;
+    margin-top: 1.5rem;
+    position: relative;
+    box-shadow: var(--shadow);
 }
 body {
     min-height: 100vh;
@@ -68,14 +71,14 @@ input {
 }
 
 body > * {
-    padding-left: clamp(1rem, 4vw, 5rem);
-    padding-right: clamp(1rem, 4vw, 5rem);
+    margin-left: clamp(1rem, 5vw, 5rem);
+    margin-right: clamp(1rem, 5vw, 5rem);
 }
 
 .search.box {
     position: absolute;
-    right: clamp(1rem, 4vw, 2rem);
-    top: 1.75rem;
+    right: clamp(1.5rem, 4vw, 3rem);
+    top: 2rem;
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
@@ -101,8 +104,10 @@ body > * {
 }
 
 .main {
-    padding-top: 5.5rem;
-    padding-bottom: 3rem;
+    padding-top: 6.5rem;
+    padding-bottom: 4rem;
+    padding-left: clamp(2rem, 5vw, 5rem);
+    padding-right: clamp(2rem, 5vw, 5rem);
 }
 
 .navbar {
@@ -121,6 +126,7 @@ body > * {
 }
 
 .logo {
+    color: #ffffff;
     font-size: clamp(1.9rem, 3vw, 3rem);
     letter-spacing: -0.05em;
     margin-bottom: 0.75rem;
@@ -128,7 +134,7 @@ body > * {
 }
 
 .navbar h4 {
-    color: var(--accent);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -136,6 +142,7 @@ body > * {
 }
 
 .navbar h1 {
+    color: #ffffff;
     font-size: clamp(2.5rem, 5vw, 4.25rem);
     max-width: 12ch;
     margin-bottom: 1.5rem;
@@ -144,13 +151,14 @@ body > * {
 
 .navbar p {
     max-width: 70ch;
-    color: var(--text-muted);
-    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
 }
 
 .section {
-    margin-top: 2rem;
-    padding: 3rem 0;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding: 0;
     background: transparent;
 }
 
@@ -159,9 +167,9 @@ body > * {
 .section.hub-section,
 .section.leadership-section {
     background: #dfe3e9;
-    border-radius: 4rem;
+    border-radius: 3rem;
     box-shadow: var(--shadow);
-    padding: 3rem clamp(1.5rem, 3vw, 4rem);
+    padding: 4rem clamp(2rem, 5vw, 5rem);
 }
 
 .section-inner {
@@ -450,8 +458,9 @@ body > * {
     }
 
     .search.box {
-        right: 1rem;
-        left: 1rem;
+        right: clamp(1rem, 4vw, 2rem);
+        left: clamp(1rem, 4vw, 2rem);
+        justify-content: space-between;
     }
 }
 
@@ -468,7 +477,8 @@ body > * {
     .section.message-section,
     .section.hub-section,
     .section.leadership-section {
-        padding: 2rem 1.25rem;
+        padding: 2.5rem 1.5rem;
+        border-radius: 2rem;
     }
 
     .footer-grid {
