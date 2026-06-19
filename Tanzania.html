@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity Hospital - Tanzania</title>
+    <link rel="stylesheet" href="T_style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Aga Khan Hospital</div>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="project.html">Home</a></li>
+                <li><a href="#hospitals">Hospitals</a></li>
+                <li><a href="#health-centres">Health Centres</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Aga Khan Health Service, Tanzania</h1>
+            <p>90+ Years of Delivering Excellence in Healthcare</p>
+            <button class="btn btn-primary" onclick="document.getElementById('hospitals').scrollIntoView({behavior: 'smooth'})">Explore Services</button>
+        </div>
+    </section>
+
+    <!-- Main Hospitals Section -->
+    <section id="hospitals" class="hospitals-section">
+        <div class="container">
+            <h2>Hospitals & Medical Centres</h2>
+            <p class="section-intro">Celebrating a history of 90+ years in Tanzania with world-class healthcare facilities</p>
+            
+            <div class="hospitals-grid">
+                <!-- Dar es Salaam Hospital -->
+                <div class="hospital-card">
+                    <div class="hospital-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <h3>Aga Khan Hospital, Dar es Salaam</h3>
+                    <p class="beds">170-Bed Teaching & Tertiary Care Hospital</p>
+                    <ul class="services-list">
+                        <li>✓ Cardiology</li>
+                        <li>✓ Oncology</li>
+                        <li>✓ Neurosciences</li>
+                        <li>✓ Nephrology & Dialysis</li>
+                        <li>✓ Post Graduate Medical Education</li>
+                    </ul>
+                    <p class="contact-info">
+                        <strong>Phone:</strong> +255 788 570 252<br>
+                        <strong>ISO Certified | JCI Accredited</strong>
+                    </p>
+                </div>
+
+                <!-- Mwanza Hospital -->
+                <div class="hospital-card">
+                    <div class="hospital-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <h3>Aga Khan Hospital, Mwanza</h3>
+                    <p class="beds">22-Bed Comprehensive Health Facility</p>
+                    <ul class="services-list">
+                        <li>✓ General Medicine</li>
+                        <li>✓ Surgery</li>
+                        <li>✓ Diagnostic Services</li>
+                        <li>✓ Maternity Care</li>
+                        <li>✓ Referral Services</li>
+                    </ul>
+                    <p class="contact-info">
+                        <strong>Phone:</strong> +255 788 570 252<br>
+                        <strong>SafeCare Certified</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Centres Section -->
+    <section id="health-centres" class="health-centres-section">
+        <div class="container">
+            <h2>Health Centres & Clinics Network</h2>
+            <p class="section-intro">27 Primary Health Centers across Tanzania providing accessible and affordable quality healthcare</p>
+            
+            <div class="centres-tabs">
+                <button class="tab-btn active" onclick="filterCentres('dar')">Dar es Salaam</button>
+                <button class="tab-btn" onclick="filterCentres('mwanza')">Mwanza Region</button>
+                <button class="tab-btn" onclick="filterCentres('other')">Other Regions</button>
+            </div>
+
+            <div class="centres-grid" id="centresGrid">
+                <!-- Dar es Salaam Centers -->
+                <div class="centre-card dar" data-region="dar">
+                    <h4>Aga Khan Polyclinic, Mbezi</h4>
+                    <p>Mbezi, Dar es Salaam</p>
+                    <p class="services">General Medicine • Dental • Diagnostics</p>
+                </div>
+                <div class="centre-card dar" data-region="dar">
+                    <h4>Aga Khan Polyclinic, City Centre</h4>
+                    <p>City Centre, Dar es Salaam</p>
+                    <p class="services">Specialty Clinics • Pharmacy • Radiology</p>
+                </div>
+                <div class="centre-card dar" data-region="dar">
+                    <h4>Aga Khan Polyclinic, Masaki</h4>
+                    <p>Masaki, Dar es Salaam</p>
+                    <p class="services">General Medicine • Diagnostic Services</p>
+                </div>
+                <div class="centre-card dar" data-region="dar">
+                    <h4>Aga Khan Polyclinic, Sinza</h4>
+                    <p>Sinza, Dar es Salaam</p>
+                    <p class="services">Pediatrics • General Medicine • Pharmacy</p>
+                </div>
+                <div class="centre-card dar" data-region="dar">
+                    <h4>Aga Khan Polyclinic, Tabata</h4>
+                    <p>Tabata, Dar es Salaam</p>
+                    <p class="services">General Medicine • Dental • Diagnostics</p>
+                </div>
+                <div class="centre-card dar" data-region="dar">
+                    <h4>Aga Khan Polyclinic, Ukonga</h4>
+                    <p>Ukonga, Dar es Salaam</p>
+                    <p class="services">General Medicine • Specialty Clinics</p>
+                </div>
+
+                <!-- Mwanza Region -->
+                <div class="centre-card mwanza" data-region="mwanza">
+                    <h4>Aga Khan Polyclinic, Bukoba</h4>
+                    <p>Bukoba, Mwanza</p>
+                    <p class="services">General Medicine • Diagnostics</p>
+                </div>
+                <div class="centre-card mwanza" data-region="mwanza">
+                    <h4>Aga Khan Polyclinic, Bunda</h4>
+                    <p>Bunda, Mwanza</p>
+                    <p class="services">Primary Care • Pharmacy</p>
+                </div>
+                <div class="centre-card mwanza" data-region="mwanza">
+                    <h4>Aga Khan Polyclinic, Geita</h4>
+                    <p>Geita, Mwanza</p>
+                    <p class="services">General Medicine • Dental</p>
+                </div>
+
+                <!-- Other Regions -->
+                <div class="centre-card other" data-region="other">
+                    <h4>Aga Khan Polyclinic, Arusha</h4>
+                    <p>Arusha</p>
+                    <p class="services">Specialty Clinics • CT-Scan • Ultrasound</p>
+                </div>
+                <div class="centre-card other" data-region="other">
+                    <h4>Aga Khan Polyclinic, Dodoma</h4>
+                    <p>Dodoma</p>
+                    <p class="services">General Medicine • Diagnostics</p>
+                </div>
+                <div class="centre-card other" data-region="other">
+                    <h4>Aga Khan Polyclinic, Iringa</h4>
+                    <p>Iringa</p>
+                    <p class="services">General Medicine • Pharmacy</p>
+                </div>
+                <div class="centre-card other" data-region="other">
+                    <h4>Aga Khan Polyclinic, Mbeya</h4>
+                    <p>Mbeya</p>
+                    <p class="services">General Medicine • Diagnostic Services</p>
+                </div>
+                <div class="centre-card other" data-region="other">
+                    <h4>Aga Khan Polyclinic, Morogoro</h4>
+                    <p>Morogoro</p>
+                    <p class="services">Primary Care • Specialty Clinics</p>
+                </div>
+                <div class="centre-card other" data-region="other">
+                    <h4>Aga Khan Polyclinic, Tanga</h4>
+                    <p>Tanga</p>
+                    <p class="services">General Medicine • Diagnostics</p>
+                </div>
+                <div class="centre-card other" data-region="other">
+                    <h4>Aga Khan Polyclinic, Zanzibar (Old Dispensary)</h4>
+                    <p>Stone Town, Zanzibar</p>
+                    <p class="services">General Medicine • Diagnostics • Specialty Clinics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Facts Section -->
+    <section class="quick-facts">
+        <div class="container">
+            <h2>Quick Facts</h2>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <h3>170</h3>
+                    <p>Bed - Teaching & Tertiary Hospital, Dar es Salaam</p>
+                </div>
+                <div class="fact-card">
+                    <h3>22</h3>
+                    <p>Bed - Aga Khan Hospital, Mwanza</p>
+                </div>
+                <div class="fact-card">
+                    <h3>192</h3>
+                    <p>Total Beds</p>
+                </div>
+                <div class="fact-card">
+                    <h3>27</h3>
+                    <p>Health Centres</p>
+                </div>
+                <div class="fact-card">
+                    <h3>1,020,227</h3>
+                    <p>Out-Patient Visits</p>
+                </div>
+                <div class="fact-card">
+                    <h3>11,180</h3>
+                    <p>In-Patient Admissions</p>
+                </div>
+                <div class="fact-card">
+                    <h3>5,232</h3>
+                    <p>Surgeries Performed</p>
+                </div>
+                <div class="fact-card">
+                    <h3>1,057</h3>
+                    <p>Full Time Staff</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="about" class="history-section">
+        <div class="container">
+            <h2>History & Milestones</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1929</div>
+                    <div class="timeline-content">
+                        <h4>First Health Centre Established</h4>
+                        <p>First Health Centre established in Dar es Salaam</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">1964</div>
+                    <div class="timeline-content">
+                        <h4>Hospital Expansion</h4>
+                        <p>Health centre expanded into a 32-bed Aga Khan Hospital, Dar es Salaam</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2000</div>
+                    <div class="timeline-content">
+                        <h4>Further Expansion</h4>
+                        <p>Aga Khan Hospital, Dar es Salaam expanded into a 74-bed multispecialty institution</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2018</div>
+                    <div class="timeline-content">
+                        <h4>Teaching Hospital Status</h4>
+                        <p>Hospital grows into a 170-bed teaching and tertiary care referral hospital</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2019</div>
+                    <div class="timeline-content">
+                        <h4>Mwanza Hospital Establishment</h4>
+                        <p>Primary Medical Centre in Mwanza evolves into a 22-bed ISO-certified facility</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2023</div>
+                    <div class="timeline-content">
+                        <h4>Zanzibar Expansion</h4>
+                        <p>First Aga Khan Polyclinic opened in Stone Town, Zanzibar Island</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="leadership-section">
+        <div class="container">
+            <h2>Our Leadership Team</h2>
+            <div class="leadership-grid">
+                <div class="leader-card">
+                    <div class="leader-avatar">SK</div>
+                    <h4>Sisawo Konteh</h4>
+                    <p class="position">Chief Executive Officer</p>
+                    <p class="description">Chief Executive Officer, Aga Khan Health Service, Tanzania</p>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-avatar">HC</div>
+                    <h4>Dr. Harrison Chuwa</h4>
+                    <p class="position">Medical Director</p>
+                    <p class="description">Medical Director and Consultant Oncologist</p>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-avatar">AM</div>
+                    <h4>Aika Mongi</h4>
+                    <p class="position">Head of Nursing Services</p>
+                    <p class="description">Head of Nursing Services, Aga Khan Health Service, Tanzania</p>
+                </div>
+                <div class="leader-card">
+                    <div class="leader-avatar">AL</div>
+                    <h4>Amin Lakhani</h4>
+                    <p class="position">Head of Finance</p>
+                    <p class="description">Head of Finance, Aga Khan Health Service, Tanzania</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accreditations Section -->
+    <section class="accreditations-section">
+        <div class="container">
+            <h2>Accreditations & Certifications</h2>
+            <div class="accreditations-grid">
+                <div class="accreditation-card">
+                    <h4>ISO 9001-2000</h4>
+                    <p>2003-2019: Dar es Salaam Hospital and five Outreach Health Centres</p>
+                </div>
+                <div class="accreditation-card">
+                    <h4>JCI Accreditation</h4>
+                    <p>2016-2025: Joint Commission International Gold Seal of Approval</p>
+                </div>
+                <div class="accreditation-card">
+                    <h4>SADCAS Accreditation</h4>
+                    <p>2017: Hospital Laboratory accreditation</p>
+                </div>
+                <div class="accreditation-card">
+                    <h4>SafeCare Certification</h4>
+                    <p>2019-2021: Recognized centres of excellence for service provision</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <h2>Latest News & Updates</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <h4>New Cancer Centre in Dar es Salaam</h4>
+                    <p>Advanced cancer treatment facility designed to treat 100 patients per day with world-class expertise.</p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <h4>Leadership Recognition</h4>
+                    <p>Dr. Zeenat Sulaiman Khan re-elected to International Hospital Federation Governing Council.</p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+                <div class="news-card">
+                    <div class="news-image"></div>
+                    <h4>Presidential Visit</h4>
+                    <p>President Andrzej Duda of Poland visits Aga Khan Hospital highlighting collaborative efforts in emergency care.</p>
+                    <a href="#" class="news-link">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info-box">
+                    <h4>Main Hospital - Dar es Salaam</h4>
+                    <p>📞 +255 788 570 252</p>
+                    <p>📧 info@agakhanhealth.or.tz</p>
+                    <p>Operating 24/7 for emergency services</p>
+                </div>
+                <div class="contact-info-box">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hospitals">Hospitals & Medical Centers</a></li>
+                        <li><a href="#health-centres">Health Centres & Clinics</a></li>
+                        <li><a href="#about">About AKHS</a></li>
+                        <li><a href="#news">Latest News</a></li>
+                    </ul>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Aga Khan Health Services, Tanzania. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a> | 
+                <a href="#">Twitter</a> | 
+                <a href="#">Instagram</a> | 
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+        <p class="covid-notice">We continuously monitor COVID-19 guidance and maintain safety protocols to keep patients and visitors safe.</p>
+    </footer>
+
+    <script src="one.js"></script>
+</body>
+</html>
