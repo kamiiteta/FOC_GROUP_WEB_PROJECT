@@ -1,0 +1,235 @@
+:root {
+--akuh-blue: #1f5fa8;
+--akuh-blue-dark: #154278;
+--akuh-blue-light: #4a8fd1;
+--text-dark: #2b2b2b;
+--tan: #c9a479;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+color: var(--text-dark);
+background: #fff;
+}
+
+/* Header */
+.top-header {
+display: flex;
+align-items: center;
+padding: 14px 24px;
+border-bottom: 1px solid #eee;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 12px;
+}
+
+.logo-mark {
+width: 46px;
+height: 46px;
+position: relative;
+flex-shrink: 0;
+}
+
+.logo-mark svg { width: 100%; height: 100%; }
+
+.logo-text {
+font-size: 22px;
+font-weight: 600;
+color: #3a3a3a;
+letter-spacing: 0.2px;
+}
+
+/* Blue nav bar */
+.nav-bar {
+background: var(--akuh-blue);
+display: flex;
+justify-content: center;
+gap: 48px;
+padding: 16px 0;
+}
+
+.nav-bar a {
+color: #fff;
+text-decoration: none;
+font-size: 15px;
+font-weight: 500;
+}
+
+.nav-bar a:hover { text-decoration: underline; }
+
+/* Hero / Carousel */
+.carousel {
+position: relative;
+width: 100%;
+height: 460px;
+overflow: hidden;
+background: #cbb491;
+}
+
+.carousel img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+.carousel-arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background: var(--akuh-blue);
+color: #fff;
+width: 42px;
+height: 42px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+cursor: pointer;
+user-select: none;
+border: none;
+}
+
+.carousel-arrow.left { left: 0; }
+.carousel-arrow.right { right: 0; }
+
+.hero-caption {
+position: absolute;
+bottom: 70px;
+left: 0;
+max-width: 640px;
+}
+
+.hero-caption .headline {
+display: inline-block;
+background: var(--akuh-blue-dark);
+color: #fff;
+font-size: 28px;
+font-weight: 700;
+padding: 8px 18px;
+letter-spacing: 0.5px;
+}
+
+.hero-caption .subline {
+display: block;
+color: #fff;
+font-size: 20px;
+font-weight: 500;
+padding: 10px 18px;
+text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero-bottom-strip {
+height: 26px;
+background: var(--akuh-blue);
+}
+
+/* Overview banner */
+.overview-banner {
+background: var(--akuh-blue);
+color: #fff;
+padding: 36px 24px;
+}
+
+.overview-banner .inner {
+max-width: 1100px;
+margin: 0 auto;
+}
+
+.overview-banner h2 {
+font-size: 26px;
+font-weight: 700;
+margin-bottom: 14px;
+}
+
+.overview-banner p {
+line-height: 1.7;
+font-size: 16px;
+max-width: 950px;
+}
+
+/* Hospital lists section */
+.hospital-lists {
+max-width: 1100px;
+margin: 0 auto;
+padding: 40px 24px 60px;
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 48px;
+}
+
+.hospital-lists h3 {
+color: var(--akuh-blue);
+font-size: 24px;
+font-weight: 600;
+margin-bottom: 14px;
+}
+
+.hospital-lists ul {
+list-style: none;
+}
+
+.hospital-lists li {
+border-bottom: 1px solid #e3e8ee;
+padding: 14px 4px;
+font-size: 15px;
+color: #333;
+}
+
+.hospital-lists li a {
+color: #333;
+text-decoration: none;
+}
+
+.hospital-lists li a:hover {
+color: var(--akuh-blue);
+text-decoration: underline;
+}
+
+.scroll-top {
+position: fixed;
+bottom: 28px;
+right: 28px;
+width: 44px;
+height: 44px;
+background: var(--akuh-blue);
+color: #fff;
+border: none;
+font-size: 20px;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.scroll-top:hover {
+background: var(--akuh-blue-dark);
+}
+
+footer {
+text-align: center;
+font-size: 12px;
+color: #777;
+padding: 24px;
+border-top: 1px solid #eee;
+margin-top: 40px;
+}
+
+footer a {
+color: #777;
+text-decoration: none;
+}
+
+@media (max-width: 700px) {
+.nav-bar { gap: 24px; flex-wrap: wrap; }
+.carousel { height: 280px; }
+.hero-caption .headline { font-size: 18px; }
+.hero-caption .subline { font-size: 14px; }
+.hero-caption { bottom: 40px; }
+.hospital-lists { grid-template-columns: 1fr; gap: 28px; }
+}
