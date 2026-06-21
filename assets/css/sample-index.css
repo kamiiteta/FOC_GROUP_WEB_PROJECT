@@ -8,9 +8,9 @@
 
 :root {
     --red: #104dc8;
-    --red-dark: #a00d24;
+    --red-dark: #0e1373;
     --dark: #1a1a1a;
-    --dark-green: #1a3c34;
+    --dark-green: #124539;
     --text: #333333;
     --text-muted: #666666;
     --text-light: #999999;
@@ -207,7 +207,7 @@ img {
 }
 
 .stat-card {
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(17, 34, 191, 0.97);
     border-radius: var(--radius-md);
     padding: 1.25rem 1rem;
     box-shadow: var(--shadow-md);
@@ -230,11 +230,11 @@ img {
 
 .stat-icon-green {
     background: #e6f4ea;
-    color: #1e7e34;
+    color: #1e7e46;
 }
 
 .stat-icon-red {
-    background: #fde8ec;
+    background: #e8e8fd;
     color: var(--red);
 }
 
@@ -246,14 +246,14 @@ img {
 .stat-number {
     font-size: 1.5rem;
     font-weight: 800;
-    color: var(--dark);
+    color: whitesmoke;
     line-height: 1.2;
     margin-bottom: 0.25rem;
 }
 
 .stat-label {
     font-size: 0.8rem;
-    color: var(--text-muted);
+    color: whitesmoke;
     font-weight: 500;
     line-height: 1.3;
 }
