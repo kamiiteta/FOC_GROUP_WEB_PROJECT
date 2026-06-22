@@ -215,7 +215,7 @@ if ('IntersectionObserver' in window) {
 }
 
 // ============== CONSOLE LOG FOR DEBUGGING ==============
-console.log('Aga Khan Hospital Tanzania website loaded successfully');
+console.log('Trinity Hospital Tanzania website loaded successfully');
 console.log('Features enabled: Mobile menu, Health centres filter, Form submission, Smooth scrolling');
 
 // ============== UTILITY FUNCTIONS ==============
