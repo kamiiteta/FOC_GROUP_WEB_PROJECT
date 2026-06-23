@@ -1,7 +1,7 @@
 :root {
 --akuh-blue: #010e1c;
 --akuh-blue-dark: #c2c9d2;
---akuh-blue-light: #4a8fd1;
+--akuh-blue-light: #467eb2;
 --text-dark: #2b2b2b;
 --tan: #c9a479;
 }
@@ -14,7 +14,6 @@ color: var(--text-dark);
 background: #fff;
 }
 
-/* Header */
 .top-header {
 display: flex; 
 align-items: center;
@@ -40,11 +39,10 @@ flex-shrink: 0;
 .logo-text {
 font-size: 22px;
 font-weight: 600;
-color: #326ab3;
+color: #3a3a3a;
 letter-spacing: 0.2px;
 }
 
-/* Blue nav bar */
 .nav-bar {
 background: var(--akuh-blue);
 display: flex;
@@ -121,7 +119,7 @@ color: #fff;
 font-size: 20px;
 font-weight: 500;
 padding: 10px 18px;
-text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+text-shadow: 0 1px 4px rgba(11, 11, 11, 0.5);
 }
 
 .hero-bottom-strip {
@@ -178,11 +176,11 @@ list-style: none;
 border-bottom: 1px solid #e3e8ee;
 padding: 14px 4px;
 font-size: 15px;
-color: #781717;
+color: #226995;
 }
 
 .hospital-lists li a {
-color: #333;
+color: #5592b5;
 text-decoration: none;
 }
 
@@ -216,7 +214,7 @@ text-align: center;
 font-size: 12px;
 color: #777;
 padding: 24px;
-border-top: 1px solid #eee;git 
+border-top: 1px solid #eee;
 margin-top: 40px;
 }
 
