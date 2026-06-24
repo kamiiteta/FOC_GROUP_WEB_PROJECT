@@ -1,0 +1,272 @@
+/* GENERAL */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#f4f7fb;
+color:#333;
+line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:bold;
+color:#000080;
+}
+
+header input{
+padding:10px;
+width:250px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.menu{
+font-size:30px;
+color:#000080;
+cursor:pointer;
+}
+
+/* HERO SECTION */
+
+.hero{
+height:500px;
+
+background:
+linear-gradient(
+rgba(0,40,80,0.6),
+rgba(0,40,80,0.6)
+),
+url("Mombasa.JPG");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:70px;
+margin-bottom:10px;
+}
+
+.hero p{
+font-size:24px;
+}
+
+/* STATISTICS */
+
+.stats{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+padding:40px;
+background:#eef5ff;
+}
+
+.card{
+background:white;
+width:220px;
+padding:25px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.15);
+text-align:center;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card h2{
+color:#0056b3;
+font-size:40px;
+margin-bottom:10px;
+}
+
+/* SECTIONS */
+
+section{
+padding:60px 10%;
+}
+
+section h2{
+font-size:35px;
+color:#0056b3;
+margin-bottom:20px;
+}
+
+section p{
+font-size:18px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+}
+
+.gallery img{
+width:300px;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* TEAM */
+
+.team{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+text-align:center;
+}
+
+.team img{
+width:220px;
+height:260px;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+.team p{
+margin-top:10px;
+font-weight:bold;
+}
+
+/* HISTORY */
+
+ul{
+margin-left:20px;
+font-size:18px;
+}
+
+li{
+margin-bottom:10px;
+}
+
+/* PROJECT IMAGE */
+
+section img{
+max-width:100%;
+}
+
+/* VIDEO */
+
+iframe{
+max-width:100%;
+border:none;
+border-radius:10px;
+}
+
+/* CONTACT FORM */
+
+form{
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+input,
+textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:16px;
+}
+
+textarea{
+height:150px;
+resize:none;
+}
+
+button{
+background:#0056b3;
+color:white;
+padding:12px 25px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#003d80;
+}
+
+/* FOOTER */
+
+footer{
+background:#00264d;
+color:white;
+padding:40px;
+text-align:center;
+margin-top:40px;
+}
+
+footer p{
+margin-bottom:10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:10px;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+.stats{
+flex-direction:column;
+align-items:center;
+}
+
+.gallery img{
+width:100%;
+}
+
+.team{
+flex-direction:column;
+}
+
+}
