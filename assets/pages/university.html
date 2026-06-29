@@ -53,36 +53,16 @@
 let currentSlide = 0;
 
 <!---health ceneters filter--->
-function showSlide(index) {
-    slides.forEach(slide => {
-        slide.style.display = "none";
-    });
-
-    if (slides.length > 0) {
-        slides[index].style.display = "block";
-    }
-}
-
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
-
-function previousSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-}
-
-showSlide(currentSlide);
-
-function filterCentres(region) {
+function filterCentres(region, button) {
     const cards = document.querySelectorAll('.centre-card');
     const buttons = document.querySelectorAll('.tab-btn');
-    
-    // Update active button
+
+    // Remove active class
     buttons.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-    
+
+    // Add active to clicked button
+    button.classList.add('active');
+
     // Filter cards
     cards.forEach(card => {
         if (card.dataset.region === region) {
@@ -98,14 +78,6 @@ function filterCentres(region) {
         }
     });
 }
-
-// Add transition styles to centre cards
-const centreCards = document.querySelectorAll('.centre-card');
-centreCards.forEach(card => {
-    card.style.opacity = '1';
-    card.style.transform = 'translateY(0)';
-    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-});
 </script>
 </div>
             <div class="hero-bg-placeholder"></div>
@@ -136,8 +108,13 @@ centreCards.forEach(card => {
             <p class="section-intro">27 Primary Health Centers across Tanzania providing accessible and affordable quality healthcare</p>
             
             <div class="centres-tabs">
-                <button class="tab-btn active" onclick="filterCentres('Pakistan')">PAKISTAN</button>
-                <button class="tab-btn" onclick="filterCentres('East Africa')">EAST AFRICA</button>
+                <button class="tab-btn active" onclick="filterCentres('Pakistan', this)">
+    PAKISTAN
+</button>
+
+<button class="tab-btn" onclick="filterCentres('East Africa', this)">
+    EAST AFRICA
+</button>
             </div>
 
             <div class="centres-grid" id="centresGrid">
