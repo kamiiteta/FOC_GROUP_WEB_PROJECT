@@ -366,7 +366,7 @@ button:hover{
 
 }
 .numbers:hover{
-    background-color: #fe0606;
+    background-color: blue;
     color:#fff;
     transition:0s;
 
@@ -396,7 +396,7 @@ button:hover{
 .line{
     width:130px;
     height:3px;
-    background:#c62828;
+    background:blue;
     margin-bottom:35px;
 }
 
@@ -415,7 +415,7 @@ button:hover{
     line-height:1.5;
 }
 .column a:hover{
-    color:#c62828;
+    color:blue;
 }
 
 .map{
@@ -457,7 +457,7 @@ button:hover{
 
 /* Bottom Red Copyright Bar */
 .footer-copyright-bar {
-    background-color: #c61d23; /* Matching the red color shade */
+    background-color:blue; /* Matching the red color shade */
     color: #ffffff;            /* White text */
     text-align: center;
     padding: 20px 20px;        /* Vertical height padding */
