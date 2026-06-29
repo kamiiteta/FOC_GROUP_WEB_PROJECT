@@ -288,3 +288,11 @@ text-decoration: none;
 .hero-caption { bottom: 40px; }
 .hospital-lists { grid-template-columns: 1fr; gap: 28px; }
 }
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide:first-child {
+    display: block;
+}

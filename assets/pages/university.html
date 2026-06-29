@@ -40,14 +40,41 @@
         </div>
     </header>
 
-    <nav class="nav-bar">
-      <a href="#">Hospitals in Pakistan</a>
-      <a href="#">Hospitals in East Africa</a>
-      <a href="#">Contact Us</a>
-    </nav>
+  <div class="carousel">
+    <button class="carousel-arrow left" onclick="previousSlide()">&#8249;</button>
 
-    <div class="carousel">
-      <img src="../images/emergency.png" alt="hopsital image"style="width:100%; height:100%; object-fit:cover;">
+    <img class="slide" src="../images/hospital.inside1.png" alt="Hospital">
+    <img class="slide" src="../images/hospital.inside2.png" alt="Hospital">
+
+    <button class="carousel-arrow right" onclick="nextSlide()">&#8250;</button>
+</div>
+ <script>
+  const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach(slide => {
+        slide.style.display = "none";
+    });
+
+    if (slides.length > 0) {
+        slides[index].style.display = "block";
+    }
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function previousSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
+</script>
+</div>
             <div class="hero-bg-placeholder"></div>
       <div class="hero-caption">
         <span class="headline">QUALITY IS HIGH-CLASS</span>
