@@ -1,7 +1,7 @@
 :root {
---akuh-blue: #1f5fa8;
---akuh-blue-dark: #154278;
---akuh-blue-light: #4a8fd1;
+--akuh-blue: #0c1bbd;
+--akuh-blue-dark: #c2c9d2;
+--akuh-blue-light: #467eb2;
 --text-dark: #2b2b2b;
 --tan: #c9a479;
 }
@@ -14,37 +14,90 @@ color: var(--text-dark);
 background: #fff;
 }
 
-/* Header */
-.top-header {
-display: flex;
-align-items: center;
-padding: 14px 24px;
-border-bottom: 1px solid #eee;
+.top-bar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: whitesmoke;
+    border-bottom: whitesmoke;
+    box-shadow: var(--shadow-sm);
 }
 
-.logo {
-display: flex;
-align-items: center;
-gap: 12px;
+.top-bar-inner {
+     display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    max-width: 1280px;
+    margin: 0;
+    padding: 15px 40px;
+    box-shadow: 0px 2px 5px rgba(17, 34, 191, 0.97);
 }
 
-.logo-mark {
-width: 46px;
-height: 46px;
-position: relative;
-flex-shrink: 0;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-.logo-mark svg { width: 100%; height: 100%; }
-
-.logo-text {
-font-size: 22px;
-font-weight: 600;
-color: #3a3a3a;
-letter-spacing: 0.2px;
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: rgb(59, 59, 176);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.1rem;
 }
 
-/* Blue nav bar */
+.brand-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.01em;
+}
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    margin:0;
+    padding:0;
+    align-items:center;
+}
+.nav-links a:hover{
+    color:#e3f2fd;
+    text-decoration: none;
+}
+.dropdown{
+    position:relative;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background-color: #e9f1f8;
+    min-width:200px;
+    box-shadow:0px 8px 16px rgba(17, 34, 191, 0.97);
+    border-radius:4px;
+    padding:10px 0;
+    z-index:500;
+}
+.dropdown-content a:hover{
+    background-color:#f5f5f5;
+    color: #a4a6cf;
+}
+.dropdown:hover .dropdown-content{
+    display:grid;
+}
+.arrow{
+    font-size:12px;
+    margin-left: 4px;
+    display: inline-block;
+}
 .nav-bar {
 background: var(--akuh-blue);
 display: flex;
@@ -54,13 +107,15 @@ padding: 16px 0;
 }
 
 .nav-bar a {
-color: #fff;
+color: #fbffff;
 text-decoration: none;
 font-size: 15px;
 font-weight: 500;
 }
 
-.nav-bar a:hover { text-decoration: underline; }
+.nav-bar a:hover { 
+    text-decoration: underline;
+}
 
 /* Hero / Carousel */
 .carousel {
@@ -121,7 +176,7 @@ color: #fff;
 font-size: 20px;
 font-weight: 500;
 padding: 10px 18px;
-text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+text-shadow: 0 1px 4px rgba(11, 11, 11, 0.5);
 }
 
 .hero-bottom-strip {
@@ -178,11 +233,11 @@ list-style: none;
 border-bottom: 1px solid #e3e8ee;
 padding: 14px 4px;
 font-size: 15px;
-color: #333;
+color: #226995;
 }
 
 .hospital-lists li a {
-color: #333;
+color: #5592b5;
 text-decoration: none;
 }
 
@@ -232,4 +287,12 @@ text-decoration: none;
 .hero-caption .subline { font-size: 14px; }
 .hero-caption { bottom: 40px; }
 .hospital-lists { grid-template-columns: 1fr; gap: 28px; }
+}
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide:first-child {
+    display: block;
 }
