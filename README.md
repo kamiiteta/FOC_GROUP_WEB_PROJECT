@@ -11,7 +11,7 @@
 * Nakato Mary
 * Atwiine Gabriel
 * Nimurungi Belyse
-* Nahirya Diana
+* Nahirya Dianah Tendo
 * Ruhinda Linda
 
 ## Course Unit
