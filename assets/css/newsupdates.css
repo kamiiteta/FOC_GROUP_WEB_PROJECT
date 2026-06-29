@@ -1,0 +1,87 @@
+/* OUR IMPACT SECTION */
+
+#Our\ impact{
+    background:#f4f9fc;
+    padding:70px 10%;
+}
+
+#Our\ impact h3{
+    text-align:center;
+    font-size:40px;
+    color:#005b96;
+    margin-bottom:50px;
+    position:relative;
+}
+
+#Our\ impact h3::after{
+    content:"";
+    width:90px;
+    height:4px;
+    background:#00a8e8;
+    display:block;
+    margin:15px auto;
+    border-radius:5px;
+}
+
+.impact-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:50px;
+    max-width:1200px;
+    margin:auto;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    padding:40px;
+}
+
+.impact-text{
+    flex:1;
+}
+
+.impact-text p{
+    font-size:18px;
+    line-height:1.9;
+    color:#555;
+    margin-bottom:20px;
+    text-align:justify;
+}
+
+.impact-image{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.impact-image img{
+    width:100%;
+    max-width:500px;
+    height:420px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    transition:.4s;
+}
+
+.impact-image img:hover{
+    transform:scale(1.05);
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+    .impact-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .impact-text p{
+        text-align:left;
+    }
+
+    .impact-image img{
+        height:300px;
+    }
+}
