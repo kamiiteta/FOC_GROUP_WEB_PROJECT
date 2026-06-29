@@ -30,7 +30,7 @@
                             <a href="assets/pages/afghanistan.html">Afghanistan</a>
                             <a href="assets/pages/kenya.html">Kenya</a>
                             <a href="assets/pages/pakistan.html">Pakistan</a>
-                            <a href="assets/pages/Tanzania.html">Tanzania</a>
+                            <a href="assets/pages/tanzania.html">Tanzania</a>
                             <a href="assets/pages/university.html">Trinity University Hospitals</a>
                         </div>
                     </li>
@@ -52,6 +52,7 @@
   const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
 
+<!---health ceneters filter--->
 function showSlide(index) {
     slides.forEach(slide => {
         slide.style.display = "none";
@@ -73,6 +74,38 @@ function previousSlide() {
 }
 
 showSlide(currentSlide);
+
+function filterCentres(region) {
+    const cards = document.querySelectorAll('.centre-card');
+    const buttons = document.querySelectorAll('.tab-btn');
+    
+    // Update active button
+    buttons.forEach(btn => btn.classList.remove('active'));
+    event.target.classList.add('active');
+    
+    // Filter cards
+    cards.forEach(card => {
+        if (card.dataset.region === region) {
+            card.style.display = 'block';
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 0);
+        } else {
+            card.style.display = 'none';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(10px)';
+        }
+    });
+}
+
+// Add transition styles to centre cards
+const centreCards = document.querySelectorAll('.centre-card');
+centreCards.forEach(card => {
+    card.style.opacity = '1';
+    card.style.transform = 'translateY(0)';
+    card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+});
 </script>
 </div>
             <div class="hero-bg-placeholder"></div>
@@ -95,6 +128,108 @@ showSlide(currentSlide);
         </p>
       </div>
     </section>
+
+      <!-- Health Centres Section -->
+    <section id="health-centres" class="health-centres-section">
+        <div class="container">
+            <h2>Health Centres & Clinics Network</h2>
+            <p class="section-intro">27 Primary Health Centers across Tanzania providing accessible and affordable quality healthcare</p>
+            
+            <div class="centres-tabs">
+                <button class="tab-btn active" onclick="filterCentres('Pakistan')">PAKISTAN</button>
+                <button class="tab-btn" onclick="filterCentres('East Africa')">EAST AFRICA</button>
+            </div>
+
+            <div class="centres-grid" id="centresGrid">
+                <!-- Trinity University Hospital-->
+                <div class="centre-card dar" data-region="dar">
+                    <h4>Trinity Polyclinic, Mbezi</h4>
+                    <p>Mbezi, Dar es Salaam</p>
+                    <p class="services">General Medicine • Dental • Diagnostics</p>
+                </div>
+                <div class="centre-card dar" data-region="dar">
+                    <h4>Trinity Polyclinic, City Centre</h4>
+                    <p>City Centre, Dar es Salaam</p>
+                    <p class="services">Specialty Clinics • Pharmacy • Radiology</p>
+                </div>
+                <div class="centre-card dar" data-region="dar">
+                    <h4>Trinity Polyclinic, Masaki</h4>
+                    <p>Masaki, Dar es Salaam</p>
+                    <p class="services">General Medicine • Diagnostic Services</p>
+                </div>
+                <div class="centre-card dar" data-region="dar">
+                    <h4>Trinity Polyclinic, Sinza</h4>
+                    <p>Sinza, Dar es Salaam</p>
+                    <p class="services">Pediatrics • General Medicine • Pharmacy</p>
+                </div>
+                <div class="centre-card dar" data-region="dar">
+                    <h4>Trinity Polyclinic, Tabata</h4>
+                    <p>Tabata, Dar es Salaam</p>
+                    <p class="services">General Medicine • Dental • Diagnostics</p>
+                </div>
+                <div class="centre-card dar" data-region="dar">
+                    <h4>Trinity Polyclinic, Ukonga</h4>
+                    <p>Ukonga, Dar es Salaam</p>
+                    <p class="services">General Medicine • Specialty Clinics</p>
+                </div>
+
+                <!-- Mwanza Region -->
+                <div class="centre-card mwanza" data-region="mwanza">
+                    <h4>Trinity Polyclinic, Bukoba</h4>
+                    <p>Bukoba, Mwanza</p>
+                    <p class="services">General Medicine • Diagnostics</p>
+                </div>
+                <div class="centre-card mwanza" data-region="mwanza">
+                    <h4>Trinity Polyclinic, Bunda</h4>
+                    <p>Bunda, Mwanza</p>
+                    <p class="services">Primary Care • Pharmacy</p>
+                </div>
+                <div class="centre-card mwanza" data-region="mwanza">
+                    <h4>Trinity Polyclinic, Geita</h4>
+                    <p>Geita, Mwanza</p>
+                    <p class="services">General Medicine • Dental</p>
+                </div>
+
+                <!-- Other Regions -->
+                <div class="centre-card other" data-region="other">
+                    <h4>Trinity Polyclinic, Arusha</h4>
+                    <p>Arusha</p>
+                    <p class="services">Specialty Clinics • CT-Scan • Ultrasound</p>
+                </div>
+                <div class="centre-card other" data-region="other">
+                    <h4>Trinity Polyclinic, Dodoma</h4>
+                    <p>Dodoma</p>
+                    <p class="services">General Medicine • Diagnostics</p>
+                </div>
+                <div class="centre-card other" data-region="other">
+                    <h4>Trinity Polyclinic, Iringa</h4>
+                    <p>Iringa</p>
+                    <p class="services">General Medicine • Pharmacy</p>
+                </div>
+                <div class="centre-card other" data-region="other">
+                    <h4>Trinity Polyclinic, Mbeya</h4>
+                    <p>Mbeya</p>
+                    <p class="services">General Medicine • Diagnostic Services</p>
+                </div>
+                <div class="centre-card other" data-region="other">
+                    <h4>Trinity Polyclinic, Morogoro</h4>
+                    <p>Morogoro</p>
+                    <p class="services">Primary Care • Specialty Clinics</p>
+                </div>
+                <div class="centre-card other" data-region="other">
+                    <h4>Trinity Polyclinic, Tanga</h4>
+                    <p>Tanga</p>
+                    <p class="services">General Medicine • Diagnostics</p>
+                </div>
+                <div class="centre-card other" data-region="other">
+                    <h4>Trinity Polyclinic, Zanzibar (Old Dispensary)</h4>
+                    <p>Stone Town, Zanzibar</p>
+                    <p class="services">General Medicine • Diagnostics • Specialty Clinics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+  
     
     <section class="hospital-lists">
       <div class="column">
