@@ -1,3 +1,4 @@
+/* --- Reset & Base Variables --- */
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +6,8 @@
 }
 
 :root {
-    --primary-color: #0c4a60;    /* Classic corporate deep teal */
-    --secondary-color: #ef6c00;  /* Warm accent amber/orange */
+    --primary-color: #0c4a60;    
+    --secondary-color: #ef6c00;  
     --text-dark: #2c3e50;
     --text-light: #ffffff;
     --bg-light: #f4f7f6;
@@ -21,84 +22,100 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* --- Header Styling --- */
-.main-header {
-    background: var(--text-light);
-    border-bottom: 1px solid var(--border-color);
-    padding: 1rem 0;
+/* ── TOP BAR ── */
+.top-bar {
     position: sticky;
     top: 0;
     z-index: 100;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
 }
 
-.header-flex {
-    display: flex;
+.top-bar-inner {
+     display:flex;
     justify-content: space-between;
     align-items: center;
+    width:100%;
+    max-width: 1280px;
+    margin: 0;
+    padding: 15px 40px;
+    box-shadow: 0px 2px 5px rgba(17, 34, 191, 0.97);
 }
 
-.logo h1 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-.logo h1 span {
-    font-weight: 300;
-    color: #7f8c8d;
-    margin-left: 5px;
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: blue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.1rem;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-dark);
-    margin: 0 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+.brand-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.01em;
 }
-
-.nav-links a:hover, 
-.nav-links a.active {
-    color: var(--primary-color);
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    margin:0;
+    padding:0;
+    align-items:center;
 }
-
-/* --- Buttons --- */
-.btn {
+.nav-links a:hover{
+    color:#e3f2fd;
+}
+.dropdown{
+    position:relative;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background-color: #e2e6ea;
+    min-width:200px;
+    box-shadow:0px 8px 16px rgba(17, 34, 191, 0.97);
+    border-radius:4px;
+    padding:10px 0;
+    z-index:500;
+}
+.dropdown-content a:hover{
+    background-color:#f5f5f5;
+    color: #a4a6cf;
+}
+.dropdown:hover .dropdown-content{
+    display:grid;
+}
+.arrow{
+    font-size:12px;
+    margin-left: 4px;
     display: inline-block;
-    padding: 0.6rem 1.5rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: transform 0.2s ease, background 0.3s ease;
 }
-
-.btn-primary {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-}
-
-.btn-secondary {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
-
 /* --- Hero Section --- */
 .hero-section {
-    background: linear-gradient(rgba(12, 74, 96, 0.85), rgba(12, 74, 96, 0.85)), 
-    url()no-repeat center center/cover;
-    color: var(--text-light);
-    padding: 8rem 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.8)),
+               url("../images/emergency.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 180px 20px;
     text-align: center;
+    color: #ffffff;
 }
 
 .hero-content max-width {
@@ -117,7 +134,7 @@ body {
     opacity: 0.9;
 }
 
-/* --- Services Section --- */
+
 .services-section {
     background-color: var(--bg-light);
     padding: 5rem 0;
@@ -145,6 +162,9 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     border-top: 4px solid var(--primary-color);
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
 }
 
 .card-icon {
@@ -156,6 +176,11 @@ body {
     font-size: 1.3rem;
     margin-bottom: 0.75rem;
     color: var(--primary-color);
+}
+img{
+    max-width:100%;
+    height: 300px;
+    display:block;
 }
 
 /* --- Footer --- */
@@ -182,3 +207,116 @@ body {
         font-size: 2rem;
     }
 }
+
+.gallery-container {
+  display: flex;            
+  flex-direction: row;      
+  gap: 30px;                
+  justify-content: center; 
+  padding: 20px;
+}
+
+/* Individual card styling */
+.card {
+  display: flex;
+  flex-direction: column;  
+  width: 250px;             
+}
+
+
+.doctor-img {
+  width: 100%;             
+  height: 300px;            
+  object-fit: cover;       
+  border-radius: 4px;       
+}
+
+/* Text styling to match your screenshot */
+.doctor-name {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #111;
+  margin: 12px 0 4px 0;
+}
+
+.doctor-title {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+blue-circle{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+    color: white;
+    font-family: sans-serif;
+    font-weight:bold;
+}
+        .impact-container{
+            display:flex;
+            align-items: center;
+            gap:30px;
+        }
+           .impact-text,
+           .impact-image {
+              flex:1;
+           }
+           .impact-image img {
+            width:100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+           }
+           @media(max-width: 768px) {
+            .impact-container{
+                flex-direction:column;
+            }
+           }
+        .card{
+            display:flex;
+            flex-direction:column;
+            width:250px;
+        }
+        .carousel {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+    background: #cbb491;
+}
+
+.carousel img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+.carousel-arrow {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background: var(--akuh-blue);
+color: #fff;
+width: 42px;
+height: 42px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 22px;
+cursor: pointer;
+user-select: none;
+border: none;
+}
+
+.carousel-arrow.left { left: 0; }
+.carousel-arrow.right { right: 0; }
