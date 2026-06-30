@@ -372,15 +372,15 @@ section h2 {
 /* ============== TIMELINE / HISTORY ============== */
 .history-section {
     background-color: var(--light-bg);
-}
+} /*sets the background color of the entire history section using a custom variable*/
 
 .timeline {
-    position: relative;
+    position: relative;/*elements like markers and the vertical line can be absolutely positioned inside*/
     padding: 20px 0;
 }
 
-.timeline::before {
-    content: '';
+.timeline::before { /*Creates the vertical line down the center*/
+    content: '';/*generates an empty pseudo-element*/
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -392,19 +392,19 @@ section h2 {
 .timeline-item {
     margin-bottom: 40px;
     width: 50%;
-}
+}/**/
 
-.timeline-item:nth-child(odd) {
+.timeline-item:nth-child(odd) {/*Aligned to the left side.*/
     margin-left: 0;
     padding-right: 50px;
     text-align: right;
-}
+}/**/
 
-.timeline-item:nth-child(even) {
+.timeline-item:nth-child(even) {/*Aligned to the right side.*/
     margin-left: 50%;
     padding-left: 50px;
     text-align: left;
-}
+}/**/
 
 .timeline-marker {
     position: absolute;
@@ -421,17 +421,17 @@ section h2 {
     font-weight: bold;
     z-index: 1;
     margin-top: 0;
-}
+}/**/
 
 .timeline-content h4 {
     color: var(--primary-color);
     margin-bottom: 8px;
     font-size: 18px;
-}
+}/**/
 
 .timeline-content p {
     color: var(--light-text);
-}
+}/**/
 
 /* ============== LEADERSHIP ============== */
 .leadership-section {

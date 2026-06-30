@@ -14,7 +14,6 @@ color: var(--text-dark);
 background: #fff;
 }
 
-/* ── TOP BAR ── */
 .top-bar {
     position: sticky;
     top: 0;
@@ -44,7 +43,7 @@ background: #fff;
 .brand-icon {
     width: 36px;
     height: 36px;
-    background: blue;
+    background: rgb(59, 59, 176);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -288,4 +287,12 @@ text-decoration: none;
 .hero-caption .subline { font-size: 14px; }
 .hero-caption { bottom: 40px; }
 .hospital-lists { grid-template-columns: 1fr; gap: 28px; }
+}
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide:first-child {
+    display: block;
 }
