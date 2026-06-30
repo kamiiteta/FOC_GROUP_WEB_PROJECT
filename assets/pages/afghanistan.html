@@ -11,24 +11,40 @@
 <body>
     <header class="header">
             
-            <div class="logo" >
-                <img src="https://images.pexels.com/photos/20716649/pexels-photo-20716649.jpeg"> Trinity Hospital 
-            </div> 
-           
-            <nav class="nav-links">
-            <ul>
-                <li><button class="nav-button"><a href="project.html">Home</a></button></li> 
-                <li><button class="nav-button"><a href="#services">Services</a></button></li> 
-                <li><button class="nav-button"><a href="#contact">Contact</a></button></li> 
-                
-            </ul>
-            </nav>
-            <div class="search-bar">
-                <iput type="text" class="search-input" placeholder="search...">
-                    <button type="submit" class="search-btn">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </button>
+           <header class="top-bar" id="top-bar">
+        <div class="top-bar-inner">
+            <div class="brand">
+                <div class="brand-icon">
+                 <span>T</span>
                 </div>
+                <div class="brand-text">
+                    <span class="brand-name">Trinity Health Services</span>
+                </div>
+            </div>
+            <!--HORIZONTAL NAVBAR-->
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="sample-index.html">Home</a></li>
+                    <!--DROPDOWN MENU-->
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">
+                            Our Country footprint <span class="arrow">&#129174;</span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="../pages/afghanistan.html">Afghanistan</a>
+                            <a href="../pages/kenya.html">Kenya</a>
+                            <a href="../pages/pakistan.html">Pakistan</a>
+                            <a href="../pages/Tanzania.html">Tanzania</a>
+                            <a href="../pages/university.html">Trinity University Hospitals</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+           
+        </div>
+    
+
+            
         
     </header>
 
@@ -51,31 +67,27 @@
             <p>In Afghanistan, the Aga Khan Development Network (AKDN) has been working in partnership with the government to manage health systems through public-private partnerships. The AKDN has been involved in the development and management of several healthcare facilities across the country, including hospitals, clinics, and health centers. These partnerships have helped to improve access to healthcare services for the Afghan population, particularly in remote and underserved areas. The AKDN's involvement in healthcare management has also contributed to capacity building and training for healthcare professionals in Afghanistan.</p>
 
         </div>
-        <div class="components">
-            <div class="component">
-                
-                <button class = "about">Badakhshan: Basic Health Centres (BHCs) </button>
-                 <button class = "about">Badakhshan: Comprehensive Health Centres (CHCs)</button>
-                  <button class = "about">Badakhshan: Sub Health Centres (SHCs)</button>
-                   <button class = "about">Badakhshan: District Hospitals</button>
-                    <button class = "about">Faizabad Provincial Hospital</button>
-                
+     <div class="components">
+    <div class="component">
+        <button id="badakhshan-bhc" class="about" onclick="renderContent(this.id)">Badakhshan: Basic Health Centres (BHCs)</button>
+        <button id="badakhshan-chc" class="about" onclick="renderContent(this.id)">Badakhshan: Comprehensive Health Centres (CHCs)</button>
+        <button id="badakhshan-shc" class="about" onclick="renderContent(this.id)">Badakhshan: Sub Health Centres (SHCs)</button>
+        <button id="badakhshan-dh" class="about" onclick="renderContent(this.id)">Badakhshan: District Hospitals</button>
+        <button id="faizabad-ph" class="about" onclick="renderContent(this.id)">Faizabad Provincial Hospital</button>
+    </div>
 
-            </div>
-            <div class="component">
-                <button class = "about">Bamyan: Basic Health Centres (BHCs) </button>
-                 <button class = "about">Bamyan: Comprehensive Health Centres (CHCs)</button>
-                  <button class = "about">Bamyan: Sub Health Centres (SHCs)</button>
-                   <button class = "about">Bamyan: District Hospitals</button>
-                    <button class = "about">Bamyan Provincial Hospital</button>
-                
-
-
-            </div>
-            <div class="component3">
-                
-            </div>
-        </div>
+    <div class="component">
+        <button id="bamyan-bhc" class="about" onclick="renderContent(this.id)">Bamyan: Basic Health Centres (BHCs)</button>
+        <button id="bamyan-chc" class="about" onclick="renderContent(this.id)">Bamyan: Comprehensive Health Centres (CHCs)</button>
+        <button id="bamyan-shc" class="about" onclick="renderContent(this.id)">Bamyan: Sub Health Centres (SHCs)</button>
+        <button id="bamyan-dh" class="about" onclick="renderContent(this.id)">Bamyan: District Hospitals</button>
+        <button id="bamyan-ph" class="about" onclick="renderContent(this.id)">Bamyan Provincial Hospital</button>
+    </div>
+    
+    <div class="component3" id="display-area">
+        <p class="placeholder-text">Select a facility from the left to view details.</p>
+    </div>
+</div>
      </section>
      <section class="teo">
         <img src="https://images.pexels.com/photos/19438566/pexels-photo-19438566.jpeg" alt="indian theology" width="100%">
@@ -144,7 +156,7 @@ AKHS, A takes over the management of the Bamyan Provincial Hospital.
         <div class="dish">
         <div class= "numbers">
         <div class="icon1">
-    <img src="h_icon.svg" width="60px" height="60px" /> <p> 1015 </p>
+    <img src="https://www.svgrepo.com/show/8729/catholic-hospital-building.svg" width="60px" height="60px" /> <p> 1015 </p>
         </div> 
         <div>
             <p1>Village Health Posts</p1>
@@ -152,42 +164,42 @@ AKHS, A takes over the management of the Bamyan Provincial Hospital.
         </div>
         <div class= "numbers">
         <div class="icon1">
-    <img src="h_icon.svg" width="60px" height="60px" /> <p> 1015 </p>
+    <img src="https://www.svgrepo.com/show/8729/catholic-hospital-building.svg" width="60px" height="60px" /> <p> 158 </p>
         </div> 
         <div>
-            <p1>Village Health Posts</p1>
+            <p1>Basic & Primary Health Centers</p1>
         </div> 
         </div>
         <div class= "numbers">
         <div class="icon1">
-    <img src="h_icon.svg" width="60px" height="60px" /> <p> 1015 </p>
+    <img src="https://www.svgrepo.com/show/8729/catholic-hospital-building.svg" width="60px" height="60px" /> <p> 25 </p>
         </div> 
         <div>
-            <p1>Village Health Posts</p1>
+            <p1>Comprehensive Health Centers</p1>
         </div> 
         </div>
         <div class= "numbers">
         <div class="icon1">
-    <img src="h_icon.svg" width="60px" height="60px" /> <p> 1015 </p>
+    <img src="https://www.svgrepo.com/show/8729/catholic-hospital-building.svg" width="60px" height="60px" /> <p> 5 </p>
         </div> 
         <div>
-            <p1>Village Health Posts</p1>
+            <p1>District Hospitals</p1>
         </div> 
         </div>
         <div class= "numbers">
         <div class="icon1">
-    <img src="h_icon.svg" width="60px" height="60px" /> <p> 1015 </p>
+    <img src="https://www.svgrepo.com/show/497202/hospital.svg" width="60px" height="60px" /> <p> 2 </p>
         </div> 
         <div>
-            <p1>Village Health Posts</p1>
+            <p1>Provincial Hospitals</p1>
         </div> 
         </div>
         <div class= "numbers">
         <div class="icon1">
-    <img src="h_icon.svg" width="60px" height="60px" /> <p> 1015 </p>
+    <img src="https://www.svgrepo.com/show/340410/hospital-bed.svg" width="60px" height="60px" /> <p> 660+ </p>
         </div> 
         <div>
-            <p1>Village Health Posts</p1>
+            <p1>Beds in Total</p1>
         </div> 
         </div>
      
@@ -296,9 +308,7 @@ AKHS, A takes over the management of the Bamyan Provincial Hospital.
     
 
 </section>
-<div class="content-wrapper">
-        <p>Your website content goes here...</p>
-    </div>
+
 
     <footer class="site-footer">
         <div class="footer-disclaimer">
@@ -314,7 +324,41 @@ AKHS, A takes over the management of the Bamyan Provincial Hospital.
      
 
     
+<script>
+    const contentData = {
+    "badakhshan-bhc": "<h3>Badakhshan: BHCs</h3><p>Providing essential primary healthcare services to remote districts in Badakhshan<br> .</p> ",
+    "badakhshan-chc": "<h3>Badakhshan: CHCs</h3><p>Offering comprehensive care, including laboratory testing and maternal health services.</p>",
+    "badakhshan-shc": "<h3>Badakhshan: SHCs</h3><p>Community-based sub-centres bridging local health gaps.</p>",
+    "badakhshan-dh": "<h3>Badakhshan: District Hospitals</h3><p>Secondary care referral facilities with surgical capabilities.</p>",
+    "faizabad-ph": "<h3>Faizabad Provincial Hospital</h3><p>The main regional referral hospital operating in the provincial capital.</p>",
+    
+    "bamyan-bhc": "<h3>Bamyan: BHCs</h3><p>Outpatient services and immunizations across central highlands villages.</p>",
+    "bamyan-chc": "<h3>Bamyan: CHCs</h3><p>Enhanced diagnosis, treatment, and basic emergency obstetric care in Bamyan.</p>",
+    "bamyan-shc": "<h3>Bamyan: SHCs</h3><p>Localized health posts serving rural mountain populations.</p>",
+    "bamyan-dh": "<h3>Bamyan: District Hospitals</h3><p>Inpatient departments managing critical and urgent medical cases.</p>",
+    "bamyan-ph": "<h3>Bamyan Provincial Hospital</h3><p>Centralized provincial trauma, specialized pediatrics, and surgical care facility.</p>"
+};
 
+// 2. The onclick function called by the HTML buttons
+function renderContent(buttonId) {
+    const displayArea = document.getElementById("display-area");
+    
+    // Set the inner HTML using the clicked button's ID match
+    if (contentData[buttonId]) {
+        displayArea.innerHTML = contentData[buttonId];
+    }
+
+    // Optional: Manage active button styling
+    document.querySelectorAll(".about").forEach(btn => btn.classList.remove("active"));
+    document.getElementById(buttonId).classList.add("active");
+}
+function goToPage(selectElement) {
+  var url = selectElement.value;
+  if (url) {
+    window.location.href = url; // Redirects to the selected link
+  }
+}
+</script>
 
 
 
