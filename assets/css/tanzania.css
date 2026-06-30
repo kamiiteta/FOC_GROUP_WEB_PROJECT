@@ -137,17 +137,17 @@ img {
 
 /* ============== HERO SECTION ============== */
 .hero {
-    background-image: url(../images/emergency.png);
-    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/emergency.png);
+    background-size: cover;
     background-position: center;
-    color: var(--white);
     padding: 120px 20px;
     text-align: center;
-    min-height: 500px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 
 .hero-content h1 {
     font-size: 48px;
