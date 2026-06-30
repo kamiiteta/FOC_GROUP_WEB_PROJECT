@@ -1,3 +1,4 @@
+/* --- Reset & Base Variables --- */
 * {
     margin: 0;
     padding: 0;
@@ -5,8 +6,8 @@
 }
 
 :root {
-    --primary-color: #0c4a60;    /* Classic corporate deep teal */
-    --secondary-color: #ef6c00;  /* Warm accent amber/orange */
+    --primary-color: #0c4a60;    
+    --secondary-color: #ef6c00;  
     --text-dark: #2c3e50;
     --text-light: #ffffff;
     --bg-light: #f4f7f6;
@@ -27,7 +28,7 @@ body {
     margin: 0 auto;
 }
 
-/* --- Header Styling --- */
+
 .main-header {
     background: var(--text-light);
     border-bottom: 1px solid var(--border-color);
@@ -94,11 +95,14 @@ body {
 
 /* --- Hero Section --- */
 .hero-section {
-    background: linear-gradient(rgba(12, 74, 96, 0.85), rgba(12, 74, 96, 0.85)), 
-    url()no-repeat center center/cover;
-    color: var(--text-light);
-    padding: 8rem 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.8)),
+               url("c0c98f14da4a46418d0855314359c4e2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 180px 20px;
     text-align: center;
+    color: #ffffff;
 }
 
 .hero-content max-width {
@@ -117,7 +121,7 @@ body {
     opacity: 0.9;
 }
 
-/* --- Services Section --- */
+
 .services-section {
     background-color: var(--bg-light);
     padding: 5rem 0;
@@ -145,6 +149,9 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     border-top: 4px solid var(--primary-color);
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
 }
 
 .card-icon {
@@ -156,6 +163,11 @@ body {
     font-size: 1.3rem;
     margin-bottom: 0.75rem;
     color: var(--primary-color);
+}
+img{
+    max-width:100%;
+    height: 300px;
+    display:block;
 }
 
 /* --- Footer --- */
@@ -182,3 +194,83 @@ body {
         font-size: 2rem;
     }
 }
+
+.gallery-container {
+  display: flex;            
+  flex-direction: row;      
+  gap: 30px;                
+  justify-content: center; 
+  padding: 20px;
+}
+
+/* Individual card styling */
+.card {
+  display: flex;
+  flex-direction: column;  
+  width: 250px;             
+}
+
+
+.doctor-img {
+  width: 100%;             
+  height: 300px;            
+  object-fit: cover;       
+  border-radius: 4px;       
+}
+
+/* Text styling to match your screenshot */
+.doctor-name {
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #111;
+  margin: 12px 0 4px 0;
+}
+
+.doctor-title {
+  font-family: sans-serif;
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+blue-circle{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 50%;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+
+    color: white;
+    font-family: sans-serif;
+    font-weight:bold;
+}
+        .impact-container{
+            display:flex;
+            align-items: center;
+            gap:30px;
+        }
+           .impact-text,
+           .impact-image {
+              flex:1;
+           }
+           .impact-image img {
+            width:100%;
+            max-width: 300px;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+           }
+           @media(max-width: 768px) {
+            .impact-container{
+                flex-direction:column;
+            }
+           }
+        .card{
+            display:flex;
+            flex-direction:column;
+            width:250px;
+        }
+        
