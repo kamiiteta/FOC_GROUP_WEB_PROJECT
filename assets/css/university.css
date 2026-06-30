@@ -345,7 +345,7 @@ background: var(--akuh-blue-dark);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 1.25rem 0;
     font-size: 0.85rem;
-    background: var(--red);
+    background: blue;
     margin: 0 -2rem;
     padding-left: 2rem;
     padding-right: 2rem;
