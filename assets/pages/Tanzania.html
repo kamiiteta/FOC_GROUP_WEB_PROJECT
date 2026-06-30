@@ -6,29 +6,45 @@
     <title>Trinity Hospital - Tanzania</title>
     <link rel="stylesheet" href="../css/tanzania.css">
 </head>
+
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Aga Khan Hospital</div>
-            <button class="menu-toggle" id="menuToggle">☰</button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../../sample-index.html">Home</a></li>
-                <li><a href="#hospitals">Hospitals</a></li>
-                <li><a href="#health-centres">Health Centres</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+     <header class="top-bar" id="top-bar">
+        <div class="top-bar-inner">
+            <div class="brand">
+                <div class="brand-icon">
+                 <span>T</span>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Trinity Health Services</span>
+                </div>
+            </div>
+            <!--HORIZONTAL NAVBAR-->
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="../../sample-index.html">Home</a></li>
+                    <!--DROPDOWN MENU-->
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">
+                            Our Country footprint <span class="arrow">&#129174;</span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="../pages/afghanistan.html">Afghanistan</a>
+                            <a href="../pages/kenya.html">Kenya</a>
+                            <a href="../pages/pakistan.html">Pakistan</a>
+                            <a href="../pages/Tanzania.html">Tanzania</a>
+                            <a href="../pages/university.html">Trinity University Hospitals</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+           
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-bg">
-            <image src="assets/images/emergency.png" alt="hospital building" style="width:100%; height:100%; object-fit:cover;"></image>
-            <div class="hero-bg-placeholder"></div>
-        </div>
+        
         <div class="hero-content">
             <h1>Welcome to Trinity Hospital Service, Tanzania</h1>
             <p>90+ Years of Delivering Excellence in Healthcare</p>
@@ -45,7 +61,7 @@
             <div class="hospitals-grid">
                 <!-- Dar es Salaam Hospital -->
                 <div class="hospital-card">
-                    <div class="hospital-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="hospital-image"></div>
                     <h3>Trinity Hospital, Dar es Salaam</h3>
                     <p class="beds">170-Bed Teaching & Tertiary Care Hospital</p>
                     <ul class="services-list">
