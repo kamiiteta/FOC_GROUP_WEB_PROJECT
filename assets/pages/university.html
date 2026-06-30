@@ -1,58 +1,86 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>The Trinity University</title>
+    <title>Trinity Health Services</title>
     <link rel="stylesheet" href="../css/university.css" />
   </head>
 
   <body>
-    <header class="top-header">
-      <div class="logo">
-        <div class="logo-mark">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="#0d6efd"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8.5 5.034v1.1l.953-.55.5.867L9 7l.953.55-.5.866-.953-.55v1.1h-1v-1.1l-.953.55-.5-.866L7 7l-.953-.55.5-.866.953.55v-1.1zM13.25 9a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25zM13 11.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zm.25 1.75a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25zm-11-4a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5A.25.25 0 0 0 3 9.75v-.5A.25.25 0 0 0 2.75 9zm0 2a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 0 .25-.25v-.5a.25.25 0 0 0-.25-.25zM2 13.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25z"
-            />
-            <path
-              d="M5 1a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v1a1 1 0 0 1 1 1v4h3a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3V3a1 1 0 0 1 1-1zm2 14h2v-3H7zm3 0h1V3H5v12h1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1zm0-14H6v1h4zm2 7v7h3V8zm-8 7V8H1v7z"
-            />
-          </svg>
+    <!--TOP BAR-->
+   <header class="top-bar" id="top-bar">
+        <div class="top-bar-inner">
+            <div class="brand">
+                <div class="brand-icon">
+                 <span>T</span>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Trinity Health Services</span>
+                </div>
+            </div>
+            <!--HORIZONTAL NAVBAR-->
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="sample-index.html">Home</a></li>
+                    <!--DROPDOWN MENU-->
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">
+                            Our Country footprint <span class="arrow">&#129174;</span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="assets/pages/afghanistan.html">Afghanistan</a>
+                            <a href="assets/pages/kenya.html">Kenya</a>
+                            <a href="assets/pages/pakistan.html">Pakistan</a>
+                            <a href="assets/pages/Tanzania.html">Tanzania</a>
+                            <a href="assets/pages/university.html">Trinity University Hospitals</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+           
         </div>
-        <span class="logo-text">Trinity University Hospitals</span>
-      </div>
     </header>
 
-    <nav class="nav-bar">
-      <a href="#">Hospitals in Pakistan</a>
-      <a href="#">Hospitals in East Africa</a>
-      <a href="#">Contact Us</a>
-    </nav>
+  <div class="carousel">
+    <button class="carousel-arrow left" onclick="previousSlide()">&#8249;</button>
 
-    <div class="carousel">
-      <button class="carousel-arrow left" aria-label="Previous slide">
-        &#8249;
-      </button>
+    <img class="slide" src="../images/hospital.inside1.png" alt="Hospital">
+    <img class="slide" src="../images/hospital.inside2.png" alt="Hospital">
 
-      <img
-        src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1600&auto=format&fit=crop"
-        alt="Hospital building exterior"
-      />
+    <button class="carousel-arrow right" onclick="nextSlide()">&#8250;</button>
+</div>
+ <script>
+  const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
 
+function showSlide(index) {
+    slides.forEach(slide => {
+        slide.style.display = "none";
+    });
+
+    if (slides.length > 0) {
+        slides[index].style.display = "block";
+    }
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function previousSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
+</script>
+</div>
+            <div class="hero-bg-placeholder"></div>
       <div class="hero-caption">
-        <span class="headline">WORLD CLASS QUALITY HEALTHCARE</span>
-        <span class="subline">All specialties under one roof</span>
-      </div>
-
-      <button class="carousel-arrow right" aria-label="Next slide">
-        &#8250;
-      </button>
-    </div>
+        <span class="headline">QUALITY IS HIGH-CLASS</span>
+        <span class="subline">Our specialties under one roof</span>
+      </div>    
+</div>
 
     <div class="hero-bottom-strip"></div>
 
@@ -60,44 +88,37 @@
       <div class="inner">
         <h2>Overview</h2>
         <p>
-          Trinity University Hospitals in Karachi, Pakistan and Nairobi, Kenya
-          are private, not-for-profit institutions providing high quality health
-          care. The Main Hospitals serve as the principal sites for clinical
-          training for the University's Medical Colleges and Schools of Nursing
-          and Midwifery in Pakistan and East Africa.
+          Trinity University Hospitals, with major campuses in Karachi, Pakistan and Nairobi, Kenya, are private, not-for-profit healthcare institutions dedicated to providing exceptional medical services to their communities.
+           Equipped with modern facilities and a team of highly qualified healthcare professionals, the hospitals offer comprehensive patient care across a wide range of medical specialties. As the primary teaching hospitals for Trinity University,
+            they also serve as leading centers for clinical education and research, providing hands-on training for students in medicine, nursing, pharmacy, and allied health sciences. Through a commitment to excellence, innovation, 
+            and compassionate care, Trinity University Hospitals strive to improve the health and well-being of individuals across Pakistan and East Africa.
         </p>
       </div>
     </section>
-
+    
     <section class="hospital-lists">
       <div class="column">
         <h3>Pakistan</h3>
         <ul>
-          <li><a href="#">Trinity University Hospital, Pakistan</a></li>
-          <li>
-            <a href="#">Trinity University Hospital, Karachi, Main Campus</a>
-          </li>
-          <li><a href="#">Trinity Hospital for Women, Garden</a></li>
-          <li><a href="#">Trinity Hospital for Women, Karimabad</a></li>
-          <li>
-            <a href="#">Trinity Hospital for Women and Children, Kharadar</a>
-          </li>
-          <li>
-            <a href="#">Trinity Maternity and Child Care Centre, Hyderabad</a>
-          </li>
-          <li><a href="#">Outreach - Medical and Diagnostic Centres</a></li>
-          <li><a href="#">Outreach - Clifton Medical Services</a></li>
-          <li><a href="#">Outreach - Clinical Laboratories</a></li>
-          <li><a href="#">Outreach - Home Health Services</a></li>
+          <li>Trinity University Hospital, Pakistan</li>
+          <li>Trinity University Hospital, Karachi, Main Campus</li>
+          <li>Trinity Hospital for Women, Garden</li>
+          <li>Trinity Hospital for Women, Karimabad</li>
+          <li>Trinity Hospital for Women and Children, Kharadar</li>
+          <li>Trinity Maternity and Child Care Centre, Hyderabad</li>
+          <li>Outreach - Medical and Diagnostic Centres</li>
+          <li>Outreach - Clifton Medical Services</li>
+          <li>Outreach - Clinical Laboratories</li>
+          <li>Outreach - Home Health Services</li>
         </ul>
       </div>
 
       <div class="column">
         <h3>East Africa</h3>
         <ul>
-          <li><a href="#">Trinity University Hospital, Nairobi</a></li>
-          <li><a href="#">Outpatient Medical Centres</a></li>
-          <li><a href="#">Laboratories and Collection Centres</a></li>
+          <li>Trinity University Hospital, Nairobi</li>
+          <li>Outpatient Medical Centres</li>
+          <li>Laboratories and Collection Centres</li>
         </ul>
       </div>
     </section>
@@ -114,7 +135,7 @@
       &copy; Trinity University Hospital &nbsp;|&nbsp;
       <a href="#">Copyright</a> &nbsp;|&nbsp;
       <a href="#">Terms of Use</a> &nbsp;|&nbsp;
-      <a href="#">Webmail</a>
+      <a href="#">2026</a>
     </footer>
   </body>
 </html>
