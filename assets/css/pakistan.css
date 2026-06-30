@@ -263,7 +263,7 @@ blue-circle{
         .impact-container{
             display:flex;
             align-items: center;
-            gap:30px;
+            gap:40px;
         }
            .impact-text,
            .impact-image {
@@ -320,3 +320,12 @@ border: none;
 
 .carousel-arrow.left { left: 0; }
 .carousel-arrow.right { right: 0; }
+
+.leadership-text-class{
+    position:relative;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.image-class{
+    margin-top: 0;
+}
