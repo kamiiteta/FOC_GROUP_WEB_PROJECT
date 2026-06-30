@@ -30,7 +30,11 @@
                             <a href="../pages/afghanistan.html">Afghanistan</a>
                             <a href="../pages/kenya.html">Kenya</a>
                             <a href="../pages/pakistan.html">Pakistan</a>
+<<<<<<< HEAD
                             <a href="../pages/Tanzania.html">Tanzania</a>
+=======
+                            <a href="../pages/tanzania.html">Tanzania</a>
+>>>>>>> 269baea70b2451535fabba44b5ec202a7fedc227
                             <a href="../pages/university.html">Trinity University Hospitals</a>
                         </div>
                     </li>
@@ -49,7 +53,7 @@
     <button class="carousel-arrow right" onclick="nextSlide()">&#8250;</button>
 </div>
  <script>
-  const slides = document.querySelectorAll(".slide");
+ const slides = document.querySelectorAll(".slide");
 let currentSlide = 0;
 
 function showSlide(index) {
@@ -95,33 +99,104 @@ showSlide(currentSlide);
         </p>
       </div>
     </section>
-    
-    <section class="hospital-lists">
-      <div class="column">
-        <h3>Pakistan</h3>
-        <ul>
-          <li>Trinity University Hospital, Pakistan</li>
-          <li>Trinity University Hospital, Karachi, Main Campus</li>
-          <li>Trinity Hospital for Women, Garden</li>
-          <li>Trinity Hospital for Women, Karimabad</li>
-          <li>Trinity Hospital for Women and Children, Kharadar</li>
-          <li>Trinity Maternity and Child Care Centre, Hyderabad</li>
-          <li>Outreach - Medical and Diagnostic Centres</li>
-          <li>Outreach - Clifton Medical Services</li>
-          <li>Outreach - Clinical Laboratories</li>
-          <li>Outreach - Home Health Services</li>
-        </ul>
-      </div>
 
-      <div class="column">
-        <h3>East Africa</h3>
-        <ul>
-          <li>Trinity University Hospital, Nairobi</li>
-          <li>Outpatient Medical Centres</li>
-          <li>Laboratories and Collection Centres</li>
-        </ul>
-      </div>
-    </section>
+      <!-- Health Centres Section -->
+<section id="health-centres" class="health-centres-section">
+    <div class="container">
+        <h2>Hospital Network</h2>
+        <p class="section-intro">
+            Trinity University Hospitals operate across Pakistan and East Africa,
+            providing world-class healthcare, specialist services, diagnostics,
+            and medical education.
+        </p>
+
+        <div class="centres-tabs">
+            <button class="tab-btn active" onclick="filterCentres('pakistan', this)">Pakistan</button>
+            <button class="tab-btn" onclick="filterCentres('eastafrica', this)">East Africa</button>
+        </div>
+
+        <div class="centres-grid">
+
+            <!-- Pakistan Hospitals -->
+            <div class="centre-card" data-region="pakistan">
+                <h4>Trinity University Hospital</h4>
+                <p>Karachi, Pakistan</p>
+                <p class="services">General Medicine • Surgery • Emergency Care</p>
+            </div>
+
+            <div class="centre-card" data-region="pakistan">
+                <h4>Trinity University Hospital - Main Campus</h4>
+                <p>Karachi, Pakistan</p>
+                <p class="services">Teaching Hospital • Specialist Clinics • Diagnostics</p>
+            </div>
+
+            <div class="centre-card" data-region="pakistan">
+                <h4>Trinity Hospital for Women</h4>
+                <p>Garden, Karachi</p>
+                <p class="services">Maternity • Gynaecology • Neonatal Care</p>
+            </div>
+
+            <div class="centre-card" data-region="pakistan">
+                <h4>Trinity Hospital for Women</h4>
+                <p>Karimabad, Karachi</p>
+                <p class="services">Women's Health • Family Planning • Obstetrics</p>
+            </div>
+
+            <div class="centre-card" data-region="pakistan">
+                <h4>Trinity Hospital for Women & Children</h4>
+                <p>Kharadar, Karachi</p>
+                <p class="services">Paediatrics • Maternity • Child Health</p>
+            </div>
+
+            <div class="centre-card" data-region="pakistan">
+                <h4>Trinity Maternity & Child Care Centre</h4>
+                <p>Hyderabad, Pakistan</p>
+                <p class="services">Maternal Care • Child Health • Immunization</p>
+            </div>
+
+            <!-- East Africa -->
+            <div class="centre-card" data-region="eastafrica">
+                <h4>Trinity University Hospital</h4>
+                <p>Nairobi, Kenya</p>
+                <p class="services">General Medicine • Surgery • Emergency Services</p>
+            </div>
+
+            <div class="centre-card" data-region="eastafrica">
+                <h4>Outpatient Medical Centre</h4>
+                <p>Nairobi, Kenya</p>
+                <p class="services">Primary Care • Specialist Clinics • Pharmacy</p>
+            </div>
+
+            <div class="centre-card" data-region="eastafrica">
+                <h4>Diagnostic & Laboratory Centre</h4>
+                <p>Nairobi, Kenya</p>
+                <p class="services">Laboratory Services • Imaging • Health Screening</p>
+            </div>
+
+        </div>
+    </div>
+</section> 
+  <script>
+    function filterCentres(region, button) {
+    const cards = document.querySelectorAll('.centre-card');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    cards.forEach(card => {
+        if (card.dataset.region === region) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+window.onload = function () {
+    filterCentres('pakistan', document.querySelector('.tab-btn.active'));
+};
+  </script>  
+    
 
     <button
       class="scroll-top"
@@ -131,11 +206,35 @@ showSlide(currentSlide);
       &#9650;
     </button>
 
-    <footer>
-      &copy; Trinity University Hospital &nbsp;|&nbsp;
-      <a href="#">Copyright</a> &nbsp;|&nbsp;
-      <a href="#">Terms of Use</a> &nbsp;|&nbsp;
-      <a href="#">2026</a>
+    <footer class="footer" id="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="#">Hospitals &amp; Medical Centres</a>
+                    <a href="#">Health Centres &amp; Clinics</a>
+                </div>
+                <div class="footer-col">
+                    <h4>About THS</h4>
+                    <a href="#leadership-message">Message from the Director</a>
+                    <a href="#hub-spoke-model">Hub &amp; Spoke Model of Care</a>
+                    <a href="#geo-priorities">Our Geographic Priorities</a>
+                    <a href="#leadership-team">Our Leaders</a>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <p>Our facilities are currently taking precautions to help keep patients and visitors safe, which may
+                    include restricting screening, separating visitors and providing delivering compassionate, safe
+                    care. We continuously monitor COVID-19 guidance from the Centers for Disease Control and Prevention
+                    (CDC) and adjust our safety protocols and safeguards accordingly.</p>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 Trinity Health Services. All rights reserved.</span>
+                <div>
+                    <a href="#contact-us">Contact</a>
+                </div>
+            </div>
+        </div>
     </footer>
   </body>
 </html>
