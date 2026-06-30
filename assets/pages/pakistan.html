@@ -83,39 +83,59 @@
           </div>
         <h2>Our leadership team</h2>
         <section id="leadership" class="team-section">
-            <div class="gallery-container">
-            <div class="card">
-                <img src="assets/images/cardiologist.jpg" alt="Dr.Salma Baker" class="assets/images/cardiologist.jpg">
-                <h2>Dr.Salma Baker</h2>
-                <p>Chief Cardiologist</p>
-            </div>
-        <div class="card">
-            <img src="assets/images/chiefmedicalofficer.jpg" alt="Dr.Jane Doe" class="assets/images/chiefmedicalofficer.jpg">
-            <h3>Dr Jane Doe</h3>
-            <p>Chief Medical Officer</p>
-        </div>
-        <div class="card">
-            <img src="assets/images/chiefsurgeon.jpg" alt="Dr.Abdul Hakeem" class="assets/images/chiefsurgeon.jpg">
-            <h4>Dr.Abdul Hakeem</h4>
-            <p>Chief surgeon</p>
-        </div>
-        </div>
+            
+               
+        <div class="carousel">
+    <button class="carousel-arrow left" onclick="previousSlide()">&#8249;</button>
+
+    <img class="slide" src="../images/cardiologist.jpg" alt="assets/images/cardiologist.jpg">
+    <img class="slide" src="../images/chiefmedicalofficer.jpg" alt="assets/images/chiefmedicalofficer.jpg">
+    <img class="slide" src="../images/chiefsurgeon.jpg" alt="assets/images/chiefsurgeon.jpg">
+
+    <button class="carousel-arrow right" onclick="nextSlide()">&#8250;</button>
+</div>
+ <script>
+  const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach(slide => {
+        slide.style.display = "none";
+    });
+
+    if (slides.length > 0) {
+        slides[index].style.display = "block";
+    }
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function previousSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
+</script>
     </section>
    <section id="Services rendered" class="section">
     <h3>Services rendered</h3>
       <div class="gallery-container">
             <div class="card">
-                <img src="assets/images/consultation.jpg" alt="Consultation services" class="assets/images/consultation.jpg">
+                <img src="../images/consultation.jpg" alt="Consultation services" class="assets/images/consultation.jpg">
                 <h2>Consultation services</h2>
                 <p>Trinity services</p>
             </div>
         <div class="card">
-            <img src="assets/images/marternity.jpg" alt="Marternity services" class="assets/images/marternity.jpg">
+            <img src="../images/marternity.jpg" alt="Marternity services" class="assets/images/marternity.jpg">
             <h3>marternity services</h3>
             <p>Trinity Services</p>
         </div>
         <div class="card">
-            <img src="assets/images/diagnosis.jpg" alt="diagnosis services" class="assets/images/diagnosis.jpg">
+            <img src="../images/diagnosis.jpg" alt="diagnosis services" class="assets/images/diagnosis.jpg">
             <h4>diagnosis services</h4>
             <p>Trinity services</p>
         </div>
@@ -151,7 +171,7 @@
     </p>
 </div>
         <div class="impact-image">
-            <img src="assets/images/ourimpact.jpg" alt="Description of impact">
+            <img src="../images/ourimpact.jpg" alt="Description of impact">
         </div>
     </div>
     </section>
