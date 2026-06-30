@@ -22,81 +22,94 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-
-.main-header {
-    background: var(--text-light);
-    border-bottom: 1px solid var(--border-color);
-    padding: 1rem 0;
+/* ── TOP BAR ── */
+.top-bar {
     position: sticky;
     top: 0;
     z-index: 100;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
 }
 
-.header-flex {
-    display: flex;
+.top-bar-inner {
+     display:flex;
     justify-content: space-between;
     align-items: center;
+    width:100%;
+    max-width: 1280px;
+    margin: 0;
+    padding: 15px 40px;
+    box-shadow: 0px 2px 5px rgba(17, 34, 191, 0.97);
 }
 
-.logo h1 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
 }
 
-.logo h1 span {
-    font-weight: 300;
-    color: #7f8c8d;
-    margin-left: 5px;
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: blue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 1.1rem;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-dark);
-    margin: 0 1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
+.brand-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.01em;
 }
-
-.nav-links a:hover, 
-.nav-links a.active {
-    color: var(--primary-color);
+.nav-links{
+    list-style:none;
+    display:flex;
+    gap:25px;
+    margin:0;
+    padding:0;
+    align-items:center;
 }
-
-/* --- Buttons --- */
-.btn {
+.nav-links a:hover{
+    color:#e3f2fd;
+}
+.dropdown{
+    position:relative;
+}
+.dropdown-content{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background-color: #e2e6ea;
+    min-width:200px;
+    box-shadow:0px 8px 16px rgba(17, 34, 191, 0.97);
+    border-radius:4px;
+    padding:10px 0;
+    z-index:500;
+}
+.dropdown-content a:hover{
+    background-color:#f5f5f5;
+    color: #a4a6cf;
+}
+.dropdown:hover .dropdown-content{
+    display:grid;
+}
+.arrow{
+    font-size:12px;
+    margin-left: 4px;
     display: inline-block;
-    padding: 0.6rem 1.5rem;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    transition: transform 0.2s ease, background 0.3s ease;
 }
-
-.btn-primary {
-    background-color: var(--secondary-color);
-    color: var(--text-light);
-}
-
-.btn-secondary {
-    border: 2px solid var(--primary-color);
-    color: var(--primary-color);
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
-}
-
 /* --- Hero Section --- */
 .hero-section {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.8)),
-               url("c0c98f14da4a46418d0855314359c4e2.jpg");
+               url("assets/images/emergency.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
