@@ -231,14 +231,6 @@ section img{
 max-width:100%;
 }
 
-/* VIDEO */
-
-iframe{
-max-width:100%;
-border:none;
-border-radius:10px;
-}
-
 /* CONTACT FORM */
 
 form{
