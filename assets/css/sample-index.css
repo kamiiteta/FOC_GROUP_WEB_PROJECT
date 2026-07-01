@@ -7,13 +7,8 @@
 }
 
 :root {
-<<<<<<< HEAD
     --blue: #1013c8;
     --blue-dark: #160861;
-=======
-    --red: #104dc8;
-    --red-dark: #0e1373;
->>>>>>> cca18d7886121a8a3b5472d19d77945393990f8f
     --dark: #1a1a1a;
     --dark-green: #124539;
     --text: #333333;
@@ -85,11 +80,7 @@ img {
 .brand-icon {
     width: 36px;
     height: 36px;
-<<<<<<< HEAD
     background: rgb(21, 21, 167);
-=======
-    background: blue;
->>>>>>> 2d85fac128618c9080fe47ff65b945845cbc730b
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -229,11 +220,7 @@ img {
 }
 
 .stat-card {
-<<<<<<< HEAD
     background: rgba(49, 30, 219, 0.97);
-=======
-    background: rgba(17, 34, 191, 0.97);
->>>>>>> cca18d7886121a8a3b5472d19d77945393990f8f
     border-radius: var(--radius-md);
     padding: 1.25rem 1rem;
     box-shadow: var(--shadow-md);
