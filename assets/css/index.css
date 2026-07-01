@@ -116,21 +116,23 @@ body > * {
     padding: 3rem 0 2rem;
 }
 
-.icon {
-    width: 3rem;
-    height: 3rem;
-    border-radius: 1rem;
-    background: linear-gradient(135deg, #151d2a, #063490);
-    box-shadow: 0 20px 60px rgba(22, 70, 142, 0.18);
-    margin-bottom: 1.2rem;
+.brand-icon{
+    width: 36px;
+    height: 36px;
+    background: blue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.1rem;
 }
-
-.logo {
-    color: #ffffff;
-    font-size: clamp(1.9rem, 3vw, 3rem);
-    letter-spacing: -0.05em;
-    margin-bottom: 0.75rem;
-    line-height: 1.05;
+.brand-name{
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--dark);
+    letter-spacing: -0.01em;
 }
 
 .navbar h4 {
