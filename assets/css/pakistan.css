@@ -161,6 +161,24 @@ a {
     gap: 2rem;
 }
 
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+.gallery-container .card {
+    max-width: none;
+    min-height: 320px;
+    padding: 2rem;
+}
+
+.gallery-container .card img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
 .card {
     background: var(--text-light);
     padding: 3.5rem;
