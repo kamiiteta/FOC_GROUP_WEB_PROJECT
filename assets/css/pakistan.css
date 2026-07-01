@@ -78,6 +78,9 @@ body {
 .nav-links a:hover{
     color:#e3f2fd;
 }
+a {
+    text-decoration: none;
+}
 .dropdown{
     position:relative;
 }
