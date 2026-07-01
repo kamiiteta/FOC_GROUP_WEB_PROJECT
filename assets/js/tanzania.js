@@ -17,15 +17,15 @@ navLinks.forEach(link => {
 });
 
 // ============== HEALTH CENTRES FILTER ==============
-function filterCentres(region) {
+function filterCentres(region, buttonEl) {
     const cards = document.querySelectorAll('.centre-card');
     const buttons = document.querySelectorAll('.tab-btn');
-    
-    // Update active button
+
     buttons.forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active');
-    
-    // Filter cards
+    if (buttonEl) {
+        buttonEl.classList.add('active');
+    }
+
     cards.forEach(card => {
         if (card.dataset.region === region) {
             card.style.display = 'block';

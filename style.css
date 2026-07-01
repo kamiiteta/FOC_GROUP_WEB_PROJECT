@@ -4,89 +4,53 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.top-bar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background:white;
-    border-bottom: 1px solid var(--border);
-    box-shadow: var(--shadow-sm);
-}
-
-.top-bar-inner {
-     display:flex;
+.header{
+    display:flex;
     justify-content: space-between;
     align-items: center;
-    width:100%;
-    max-width: 1280px;
-    margin: 0;
-    padding: 15px 40px;
-    box-shadow: 0px 2px 5px rgba(41, 52, 155, 0.97);
+    padding: 10px 30px;
+    border-bottom: 1px solid black;
+}
+.logo img{
+    height: 90px;
+    width:auto;  
+
 }
 
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-}
 
-.brand-icon {
-    width: 36px;
-    height: 36px;
-    background:rgb(10, 83, 219);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 800;
-    font-size: 1.1rem;
-}
+    .nav-links ul{
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        
+    }
+   .nav-button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .nav-button a{
+        text-decoration: none;
+        color:rgb(22, 13, 121);
+        font-weight: 600;
+        font-size: 24px;
+        
+    }
+     /* button:hover a{ */
+        /* color: purple;
+        border-bottom: 2px solid purple;
+    } */
 
-.brand-name {
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: var(--dark);
-    letter-spacing: -0.01em;
-}
-.nav-links{
-    list-style:none;
-    display:flex;
-    gap:25px;
-    margin:0;
-    padding:0;
-    align-items:center;
-}
-.nav-links a:hover{
-    color:rgb(78, 78, 190);
-}
-.dropdown{
-    position:relative;
-}
-.dropdown-content{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    background-color: #e2e6ea;
-    min-width:200px;
-    box-shadow:0px 8px 16px rgba(47, 59, 175, 0.97);
-    border-radius:4px;
-    padding:10px 0;
-    z-index:500;
-}
-.dropdown-content a:hover{
-    background-color:#f5f5f5;
-    color:#1e3a8a;
-}
-.dropdown:hover .dropdown-content{
-    display:grid;
-}
-.arrow{
-    font-size:12px;
-    margin-left: 4px;
-    display: inline-block;
-}
+    .nav-links a{
+        text-decoration: none;
+        color:rgb(22, 13, 121);
+        font-weight: 600;
+        transition:all 0.0s ease-in-out;
+    }
+    .nav-links li:hover{
+        color: purple;
+        border-bottom: 2px solid purple;
+    }
     
 
 .hero{
@@ -97,21 +61,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color:white;
+    color: white;
     text-align: center;
 }
-.hero-content h1{
-    font-style:italic;
-    font-weight: 100px;
-    font-size: 52px;
-}
-.hero-content p{
-     font-style:italic;
-    font-weight: 100px;
-    font-size: 24px;
-}
-
-
 .content{
     padding: 70px 30px;
     max-width: 1200px;
@@ -119,9 +71,10 @@ body {
 
 }
 .content h2{
-    color: rgb(10, 83, 219);
+    color:blue;
     margin-bottom: 20px;
     font-size: 40px;
+    
     
 }
 
@@ -143,46 +96,24 @@ body {
     display:flex;
     flex-direction:column;
     gap:30px;
-    
 
 }
 
 .component3{
-    background-color:rgb(10, 83, 219);; 
-            color: #ffffff;             /* Ensures all text inside is white */
-            padding: 30px;
-            border-radius: 16px; 
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
-            
-            /* Center Alignment Config */
-            display: flex;
-            flex-direction: column;     /* Stack heading and paragraph vertically */
-            justify-content: center;    /* Center content vertically */
-            align-items: center;        /* Center content horizontally */
-            text-align: center;         /* Centers text lines */
-            
-            /* Dynamic sizing: height adapts perfectly to inner text content */
-            height: fit-content; 
-            min-height: 150px;
-
+    height:600px;
+    width:400px;
+    background-color:blue;
+    border-radius: 10px;
 }
-.about.active {
-            background-color:rgb(10, 83, 219);
-            color: white;
-            border-color:rgb(10, 83, 219);
-        }
 .about{
     height:60px;
     width:100%;
     border:2px dotted grey;
     border-radius:10px;
     background-color: #fff;
-    color:black;
-    text-align: center;
-    justify-content: center;
 }
 .about:hover{
-    background-color: rgb(10, 83, 219);
+    background-color: blue;
     color:white;
     transition:all 0.0s ease-in-out;
 }
@@ -220,8 +151,7 @@ body {
     padding:60px 40px;
 }
 .message h2{
-    color: white;
-    border-bottom:white;
+    color:sienna;
 }
 .message span{
     color:white;
@@ -232,7 +162,7 @@ body {
     margin:60px auto;
 }
 .section-title{
-    color:rgb(10, 83, 219);
+    color:blue;
     font-size:28px;
     font-weight:600;
     margin-bottom:30px;
@@ -261,14 +191,11 @@ body {
     overflow:hidden;
     background-color:grey;
     margin-bottom:15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    
 }
 .image-wrapper img{
     width:100%;
     height:100%;
     object-fit:cover;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 .team-card h3{
     font-size:16px;
@@ -283,7 +210,7 @@ body {
     line-height:1.4;
 }
 .story h2{
-    color: rgb(10, 83, 219);
+    color:blue;
 }
 .story{
     margin: 90px auto;
@@ -300,7 +227,7 @@ body {
     margin-top:150px;
     padding:50px;
     gap:60px;
-    flex-direction: column;
+   flex-direction: column;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/31836902/pexels-photo-31836902.jpeg");
     background-size: cover;
     background-position: center;
@@ -311,7 +238,6 @@ body {
     display:flex;
     background-color:white;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 .dish{
     display:flex;
@@ -321,8 +247,8 @@ body {
     margin-top: 1.3em;
 }
 .Facts h2{
-    color: white;
-    border-bottom: white solid ;
+    color:#fff;
+    border-bottom: #fff solid ;
 }
 .contact-us{
     
@@ -332,12 +258,12 @@ body {
     width:100vh;
     align-items: center;
     gap: 50px;
-    margin: 100px auto 250px;
+    margin-top: 30px;
+    margin-left: 20%;
     flex: 1;
-
 }
 .contact h2{
-    color:rgb(10, 83, 219);
+    color:blue;
     
 }
 .contact{
@@ -365,8 +291,7 @@ body {
     margin:30px auto;
     background:white;
     padding:40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-    height:570px;
+    margin-bottom: 90px;
 }
 
 .text{
@@ -408,14 +333,14 @@ button{
     display:block;
     margin:30px auto;
     padding:15px 40px;
-    background:rgb(10, 83, 219);
+    background:#d32f2f;
     color:white;
     border:none;
     font-size:18px;
     cursor:pointer;
 }
 button:hover{
-    background:rgb(10, 83, 219);
+    background:#b71c1c;
 }
 
 .icon1{
@@ -427,11 +352,11 @@ button:hover{
 }
 .icon1 p{
     font-weight: bold;
-    color:rgb(10, 83, 219);
+    color: #ec0f0f;
     font-size: 24pt;
 }
 .icon1 img{
-    fill:rgb(10, 83, 219);
+    fill:#ec0f0f;
 }
 .numbers{
     display:flex;
@@ -441,7 +366,7 @@ button:hover{
 
 }
 .numbers:hover{
-    background-color: rgb(10, 83, 219);
+    background-color: blue;
     color:#fff;
     transition:0s;
 
@@ -449,7 +374,7 @@ button:hover{
 .numbers:hover .icon1 p{
     color: #fff;
 }
-.conclusion{
+.footer{
     width:100%;
     display:flex;
     justify-content:space-between;
@@ -458,7 +383,6 @@ button:hover{
     margin-top: 50px;
     margin-bottom: 60px;
     align-items: flex-start;
-
 }
 
 .column{
@@ -472,7 +396,7 @@ button:hover{
 .line{
     width:130px;
     height:3px;
-    background: rgb(10, 83, 219);
+    background:blue;
     margin-bottom:35px;
 }
 
@@ -491,7 +415,7 @@ button:hover{
     line-height:1.5;
 }
 .column a:hover{
-    color: rgb(10, 83, 219);
+    color:blue;
 }
 
 .map{
@@ -505,89 +429,44 @@ button:hover{
     border:0;
 }
 .content-wrapper {
-    flex: 1; 
+    flex: 1; /* Pushes the footer to the bottom of the page */
     padding: 20px;
 }
 
 /* --- FOOTER STYLES --- */
 
-.footer {
-    background: #1a1a1a;
-    color:white;
-    padding: 3rem 0 0;
-    margin-top: 300px;
+.site-footer {
+    width: 100%;
 }
 
-.footer-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-.footer-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.5fr;
-    gap: 2.5rem;
-    padding-bottom: 2rem;
-}
-
-.footer-col h4 {
-    color: #fff;
-    font-size: 0.95rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-}
-
-.footer-col a {
-    display: block;
-    color: rgba(255, 255, 255, 0.55);
-    font-size: 0.9rem;
-    margin-bottom: 0.6rem;
-    transition: color 0.2s ease;
-}
-
-.footer-col a:hover {
-    color: #fff;
-}
-
+/* Top Disclaimer Styling */
 .footer-disclaimer {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 1.25rem 0;
+    max-width: 1100px; /* Limits the paragraph width so it doesn't stretch too wide */
+    margin: 0 auto;    /* Centers the text block horizontally */
+    padding: 40px 20px; /* Top/Bottom and Left/Right spacing */
+    text-align: center;
+    border-top: 1px solid #e0e0e0; /* Thin gray line at the very top */
 }
 
 .footer-disclaimer p {
-    font-size: 0.78rem;
-    color: rgba(255, 255, 255, 0.4);
-    line-height: 1.6;
+    color: #4a4a4a; /* Muted dark gray text color */
+    font-size: 15px;
+    line-height: 1.6; /* Comfortable reading spacing */
+    margin: 0;
 }
 
-.footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 1.25rem 0;
-    font-size: 0.85rem;
-    background:rgb(10, 83, 219);
-    margin: 0 -2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+/* Bottom Red Copyright Bar */
+.footer-copyright-bar {
+    background-color:blue; /* Matching the red color shade */
+    color: #ffffff;            /* White text */
+    text-align: center;
+    padding: 20px 20px;        /* Vertical height padding */
 }
 
-.footer-bottom span {
-    color: rgba(255, 255, 255, 0.9);
+.footer-copyright-bar p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;          /* Makes the text slightly bolded */
+    letter-spacing: 0.3px;
 }
-
-.footer-bottom a {
-    color: rgba(255, 255, 255, 0.85);
-    margin-left: 1.25rem;
-    font-size: 0.85rem;
-}
-
-.footer-bottom a:hover {
-    color: #fff;
-}
-
 

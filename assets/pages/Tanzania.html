@@ -6,28 +6,48 @@
     <title>Trinity Hospital - Tanzania</title>
     <link rel="stylesheet" href="../css/tanzania.css">
 </head>
+
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">Trinity Hospital</div>
-            <button class="menu-toggle" id="menuToggle">☰</button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="../../index.html">Home</a></li>
-                <li><a href="#hospitals">Hospitals</a></li>
-                <li><a href="#health-centres">Health Centres</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#news">News</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+     <header class="top-bar" id="top-bar">
+        <div class="top-bar-inner">
+            <div class="brand">
+                <div class="brand-icon">
+                 <span>T</span>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Trinity Health Services</span>
+                </div>
+            </div>
+            <!--HORIZONTAL NAVBAR-->
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="../../sample-index.html">Home</a></li>
+                    <!--DROPDOWN MENU-->
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">
+                            Our Country footprint <span class="arrow">&#129174;</span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="../pages/afghanistan.html">Afghanistan</a>
+                            <a href="../pages/kenya.html">Kenya</a>
+                            <a href="../pages/pakistan.html">Pakistan</a>
+                            <a href="../pages/Tanzania.html">Tanzania</a>
+                            <a href="../pages/university.html">Trinity University Hospitals</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+           
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        
         <div class="hero-content">
-            <h1>Welcome to Trinity Health Service, Tanzania</h1>
-            <p>90+ Years of Delivering Excellence in Healthcare</p>
+            <h1>Welcome to Trinity Hospital Service, Tanzania</h1>
+            <p>20+ Years of Delivering Excellence in Healthcare</p>
             <button class="btn btn-primary" onclick="document.getElementById('hospitals').scrollIntoView({behavior: 'smooth'})">Explore Services</button>
         </div>
     </section>
@@ -41,7 +61,10 @@
             <div class="hospitals-grid">
                 <!-- Dar es Salaam Hospital -->
                 <div class="hospital-card">
-                    <div class="hospital-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <div class="message-photo-wrap">
+                    <img class="message-photo" src="../images/dar.jpg" alt="Dr. Gijs Walraven"
+                        id="walraven-photo">
+                </div>
                     <h3>Trinity Hospital, Dar es Salaam</h3>
                     <p class="beds">170-Bed Teaching & Tertiary Care Hospital</p>
                     <ul class="services-list">
@@ -59,7 +82,10 @@
 
                 <!-- Mwanza Hospital -->
                 <div class="hospital-card">
-                    <div class="hospital-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <div class="message-photo-wrap">
+                    <img class="message-photo" src="../images/tz.jpg" alt="Dr. Gijs Walraven"
+                        id="walraven-photo">
+                </div>
                     <h3>Trinity Hospital, Mwanza</h3>
                     <p class="beds">22-Bed Comprehensive Health Facility</p>
                     <ul class="services-list">
@@ -85,9 +111,9 @@
             <p class="section-intro">27 Primary Health Centers across Tanzania providing accessible and affordable quality healthcare</p>
             
             <div class="centres-tabs">
-                <button class="tab-btn active" onclick="filterCentres('dar')">Dar es Salaam</button>
-                <button class="tab-btn" onclick="filterCentres('mwanza')">Mwanza Region</button>
-                <button class="tab-btn" onclick="filterCentres('other')">Other Regions</button>
+                <button class="tab-btn active" onclick="filterCentres('dar', this)">Dar es Salaam</button>
+                <button class="tab-btn" onclick="filterCentres('mwanza', this)">Mwanza Region</button>
+                <button class="tab-btn" onclick="filterCentres('other', this)">Other Regions</button>
             </div>
 
             <div class="centres-grid" id="centresGrid">
@@ -180,75 +206,34 @@
         </div>
     </section>
 
-    <!-- Quick Facts Section -->
-    <section class="quick-facts">
-        <div class="container">
-            <h2>Quick Facts</h2>
-            <div class="facts-grid">
-                <div class="fact-card">
-                    <h3>170</h3>
-                    <p>Bed - Teaching & Tertiary Hospital, Dar es Salaam</p>
-                </div>
-                <div class="fact-card">
-                    <h3>22</h3>
-                    <p>Bed - Trinity Hospital, Mwanza</p>
-                </div>
-                <div class="fact-card">
-                    <h3>192</h3>
-                    <p>Total Beds</p>
-                </div>
-                <div class="fact-card">
-                    <h3>27</h3>
-                    <p>Health Centres</p>
-                </div>
-                <div class="fact-card">
-                    <h3>1,020,227</h3>
-                    <p>Out-Patient Visits</p>
-                </div>
-                <div class="fact-card">
-                    <h3>11,180</h3>
-                    <p>In-Patient Admissions</p>
-                </div>
-                <div class="fact-card">
-                    <h3>5,232</h3>
-                    <p>Surgeries Performed</p>
-                </div>
-                <div class="fact-card">
-                    <h3>1,057</h3>
-                    <p>Full Time Staff</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- History Section -->
     <section id="about" class="history-section">
         <div class="container">
             <h2>History & Milestones</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-marker">1929</div>
+                    <div class="timeline-marker">2001</div>
                     <div class="timeline-content">
                         <h4>First Health Centre Established</h4>
                         <p>First Health Centre established in Dar es Salaam</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-marker">1964</div>
+                    <div class="timeline-marker">2004</div>
                     <div class="timeline-content">
                         <h4>Hospital Expansion</h4>
                         <p>Health centre expanded into a 32-bed Trinity Hospital, Dar es Salaam</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-marker">2000</div>
+                    <div class="timeline-marker">2010</div>
                     <div class="timeline-content">
                         <h4>Further Expansion</h4>
                         <p>Trinity Hospital, Dar es Salaam expanded into a 74-bed multispecialty institution</p>
                     </div>
                 </div>
                 <div class="timeline-item">
-                    <div class="timeline-marker">2018</div>
+                    <div class="timeline-marker">2013</div>
                     <div class="timeline-content">
                         <h4>Teaching Hospital Status</h4>
                         <p>Hospital grows into a 170-bed teaching and tertiary care referral hospital</p>
@@ -350,7 +335,7 @@
                 <div class="news-card">
                     <div class="news-image"></div>
                     <h4>Presidential Visit</h4>
-                    <p>President Andrzej Duda of Poland visits Trinity Hospital highlighting collaborative efforts in emergency care.</p>
+                    <p>President Andrzej Duda of Poland visits Aga Khan Hospital highlighting collaborative efforts in emergency care.</p>
                     <a href="#" class="news-link">Read More →</a>
                 </div>
             </div>
@@ -364,8 +349,8 @@
             <div class="contact-grid">
                 <div class="contact-info-box">
                     <h4>Main Hospital - Dar es Salaam</h4>
-                    <p>+255 788 570 252</p>
-                    <p>info@trinityhealth.or.tz</p>
+                    <p>📞 +255 788 570 252</p>
+                    <p>📧 info@agakhanhealth.or.tz</p>
                     <p>Operating 24/7 for emergency services</p>
                 </div>
                 <div class="contact-info-box">
@@ -378,12 +363,7 @@
                     </ul>
                 </div>
             </div>
-            <form class="contact-form" onsubmit="handleFormSubmit(event)">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
+            
         </div>
     </section>
 

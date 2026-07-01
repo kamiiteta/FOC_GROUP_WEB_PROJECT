@@ -5,34 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trinity health services, Pakistan</title>
-    <link rel="stylesheet" href="style .css">
+    <link rel="stylesheet" href="../css/pakistan.css">
 </head>
 <body>
-
-    <!-- Header & Navigation -->
-    <header class="main-header">
-        <div class="container header-flex">
-            <div class="logo">
-              <h1><span>T</span>Trinity health services </h1>
+   <!-- ── TOP BAR ── -->
+    <header class="top-bar" id="top-bar">
+        <div class="top-bar-inner">
+            <div class="brand">
+                <div class="brand-icon">
+                 <span>T</span>
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">Trinity Health Services</span>
+                </div>
             </div>
-            <nav class="nav-links">
-                <a href="#" class="active">Home</a>
-                <a href="#">About</a>
-                <a href="#">Services rendered</a>
-                <a href="#">Our Impact</a>
-                <a href="#">Contact Us</a>
+            <!--HORIZONTAL NAVBAR-->
+            <nav class="navbar">
+                <ul class="nav-links">
+                    <li><a href="../../sample-index.html">Home</a></li>
+                    <!--DROPDOWN MENU-->
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">
+                            Our Country footprint <span class="arrow">&#129174;</span>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="../pages/afghanistan.html">Afghanistan</a>
+                            <a href="../pages/kenya.html">Kenya</a>
+                            <a href="../pages/pakistan.html">Pakistan</a>
+                            <a href="../pages/Tanzania.html">Tanzania</a>
+                            <a href="../pages/university.html">Trinity University Hospitals</a>
+                        </div>
+                    </li>
+                </ul>
             </nav>
-            <div class="header-cta">
-                <a href="#" class="btn btn-secondary">Donate</a>
-            </div>
+           
         </div>
     </header>
-
-    <!-- Hero Banner Section -->
+    
     <section class="hero-section">
         <div class="container hero-content">
             <h2>Providing Quality, Low-Cost Healthcare</h2>
-            <p>Supplementing national efforts in maternal and child health across Sindh, Punjab, and Gilgit-Baltistan since 1924.</p>
+            <p>Supplementing national efforts in maternal and child health across Sindh, Punjab, and Gilgit-Baltistan </p>
             <a href="#" class="btn btn-primary">Learn About Our Programs</a>
         </div>
     </section>
@@ -48,25 +61,128 @@
             <div class="services-grid">
                 <!-- Card 1 -->
                 <div class="card">
-                    <div class="card-icon">🏥</div>
+                    <div class="card-icon"></div>
                     <h4>Primary Care</h4>
                     <p>Operating village-based health centers to make preventative and life-saving medicine accessible to remote mountain communities.</p>
                 </div>
                 <!-- Card 2 -->
                 <div class="card">
-                    <div class="card-icon">👩‍🍼</div>
+                    <div class="card-icon"></div>
                     <h4>Maternal & Child Health</h4>
                     <p>From the historic Janbai Maternity Home to modern practices, prioritizing safe deliveries and infant wellness treatments.</p>
                 </div>
                 <!-- Card 3 -->
                 <div class="card">
-                    <div class="card-icon">💻</div>
+                    <div class="card-icon"></div>
                     <h4>Digital Health Systems</h4>
                     <p>Leveraging eHealth teleconsultations to connect regional centers like Gilgit and Booni with specialized medical hubs.</p>
                 </div>
             </div>
         </div>
+</section>
+          </div>
+        <h2>Our leadership team</h2>
+        <section id="leadership" class="team-section">
+            
+               
+        <div class="carousel">
+    <button class="carousel-arrow left" onclick="previousSlide()">&#8249;</button>
+
+    <img class="slide" src="../images/cardiologist.jpg" alt="assets/images/cardiologist.jpg">
+    <img class="slide" src="../images/chiefmedicalofficer.jpg" alt="assets/images/chiefmedicalofficer.jpg">
+    <img class="slide" src="../images/chiefsurgeon.jpg" alt="assets/images/chiefsurgeon.jpg">
+
+    <button class="carousel-arrow right" onclick="nextSlide()">&#8250;</button>
+</div>
+ <script>
+  const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+
+function showSlide(index) {
+    slides.forEach(slide => {
+        slide.style.display = "none";
+    });
+
+    if (slides.length > 0) {
+        slides[index].style.display = "block";
+    }
+}
+
+function nextSlide() {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}
+
+function previousSlide() {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
+</script>
     </section>
+   <section id="Services rendered" class="section">
+    <h3>Services rendered</h3>
+      <div class="gallery-container">
+            <div class="card">
+                <img src="../images/consultation.jpg" alt="Consultation services" class="assets/images/consultation.jpg">
+                <h2>Consultation services</h2>
+                <p>Trinity services</p>
+            </div>
+        <div class="card">
+            <img src="../images/marternity.jpg" alt="Marternity services" class="assets/images/marternity.jpg">
+            <h3>marternity services</h3>
+            <p>Trinity Services</p>
+        </div>
+        <div class="card">
+            <img src="../images/diagnosis.jpg" alt="diagnosis services" class="assets/images/diagnosis.jpg">
+            <h4>diagnosis services</h4>
+            <p>Trinity services</p>
+        </div>
+        </div>
+   <p>We offer comprehensive healthcare solutions tailored to community needs, 
+  including primary medical care, diagnostic testing, specialist consultations, 
+  and emergency response services. Our dedicated team of professionals ensures 
+  high-quality clinical care and accessible health resource management.</p>
+  </section>
+
+<section id="Our impact" class="section">
+    <h3>Our impact</h3>
+    <div class="impact-container">
+        <div class="impact-text">
+        <p>Through dedicated outreach and medical excellence, Trinity Health Service Pakistan 
+  has positively impacted thousands of lives. We have expanded healthcare access 
+  in underserved regions, reduced critical recovery times, and established ongoing 
+  wellness and preventative medicine initiatives nationwide.Bringing vital medical care directly
+</p> 
+   <p>
+        Bringing vital medical care directly to the heart of the community, our latest hospital outreach 
+        initiative transformed local gathering spaces into vibrant hubs of health, healing, and hope. 
+        Teams of dedicated doctors, nurses, and specialists worked tirelessly throughout the day to provide 
+        comprehensive health screenings, distribute essential medications, and deliver specialized consultations 
+        to hundreds of individuals who otherwise lack reliable access to care. 
+    </p>
+    <p>
+        Beyond treating immediate physical ailments, the event fostered deep connections as healthcare 
+        professionals took the time to listen to personal stories and empower families with invaluable 
+        preventative health education. By breaking down geographic and socioeconomic barriers, this outreach 
+        occasion not only addressed critical medical needs on the spot but also left a lasting blueprint 
+        for sustainable wellness within the community.
+    </p>
+</div>
+        <div class="impact-image">
+            <img src="../images/ourimpact.jpg" alt="Description of impact">
+        </div>
+    </div>
+    </section>
+<section id="contact" class="section">
+    <h3>contact</h3>
+    <p><strong>Email:</strong> info@trinityhealth.pk <br>
+  <strong>Phone:</strong> +92 (000) 123-4567 <br>
+  <strong>Address:</strong> Trinity Health Head Office, Pakistan</p>
+  </section>
+
+
 
     <!-- Footer -->
     <footer class="main-footer">
