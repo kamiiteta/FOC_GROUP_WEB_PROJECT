@@ -269,27 +269,3 @@ body {
     font-size: 0.9rem;
     font-weight: 400;
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .logo-text {
-        font-size: 1.15rem;
-    }
-    
-    .article-body {
-        font-size: 1rem;
-    }
-    
-    .widget-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .map-placeholder {
-        height: 240px;
-    }
-    
-    .disclaimer-text {
-        text-align: left;
-    }
-}
