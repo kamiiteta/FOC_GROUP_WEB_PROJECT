@@ -41,7 +41,7 @@ body {
 .brand-icon {
     width: 36px;
     height: 36px;
-    background: var(--red);
+    background: rgb(18, 18, 161);
     border-radius: 50%;
     display: flex;
     align-items: center;
