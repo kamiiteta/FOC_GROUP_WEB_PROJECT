@@ -423,16 +423,3 @@ h2{
     height:auto;
     display: block;
 }
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.image-box {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-img {
-  object-fit: contain;
-}
