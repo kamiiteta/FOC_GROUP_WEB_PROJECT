@@ -37,7 +37,6 @@ body {
     justify-content: space-between;
     align-items: center;
     width:100%;
-    max-width: 1280px;
     margin: 0;
     padding: 15px 40px;
     box-shadow: 0px 2px 5px rgba(17, 34, 191, 0.97);
@@ -78,6 +77,9 @@ body {
 }
 .nav-links a:hover{
     color:#e3f2fd;
+}
+a {
+    text-decoration: none;
 }
 .dropdown{
     position:relative;
@@ -134,6 +136,9 @@ body {
     opacity: 0.9;
 }
 
+.section {
+    padding: 4rem 2rem;
+}
 
 .services-section {
     background-color: var(--bg-light);
@@ -154,6 +159,24 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.75rem;
+    align-items: stretch;
+}
+
+.gallery-container .card {
+    max-width: none;
+    min-height: 320px;
+    padding: 2rem;
+}
+
+.gallery-container .card img {
+    border-radius: 8px;
+    margin-bottom: 1rem;
 }
 
 .card {
