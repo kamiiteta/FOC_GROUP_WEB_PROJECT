@@ -13,7 +13,6 @@
     --dark-green: #124539;
     --text: #333333;
     --text-muted: #666666;
-    --text-light: #999999;
     --bg: #ffffff;
     --bg-light: #f5f5f5;
     --bg-section: #f8f8f8;
@@ -93,7 +92,7 @@ img {
 .brand-name {
     font-size: 1.05rem;
     font-weight: 700;
-    color: var(--dark);
+    color: black;
     letter-spacing: -0.01em;
 }
 .nav-links{
@@ -103,6 +102,9 @@ img {
     margin:0;
     padding:0;
     align-items:center;
+}
+.nav-links a {
+    color: black;
 }
 .nav-links a:hover{
     color:#e3f2fd;
@@ -146,6 +148,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    color: #ffffff;
 }
 
 
@@ -153,6 +157,7 @@ img {
     font-size: 48px;
     margin-bottom: 20px;
     animation: slideDown 0.8s ease;
+    color: #ffffff;
 }
 
 .hero-content p {
@@ -160,28 +165,7 @@ img {
     margin-bottom: 40px;
     opacity: 0.95;
     animation: slideUp 0.8s ease 0.2s both;
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    color: #ffffff;
 }
 
 /* ============== BUTTONS ============== */
@@ -316,6 +300,32 @@ section h2 {
     background-color: var(--white);
 }
 
+.health-centres-section {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.health-centres-section h2 {
+    font-size: 32px;
+    color: var(--akuh-blue);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.health-centres-section p {
+    font-size: 18px;
+    color: #555;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
 .centres-tabs {
     display: flex;
     justify-content: center;
@@ -377,17 +387,120 @@ section h2 {
     font-size: 18px;
 }
 
-.centre-card p {
-    color: var(--light-text);
-    font-size: 14px;
-    margin-bottom: 8px;
+
+/* ==========================================================================
+   HEALTH CENTRES / HOSPITAL NETWORK SECTION STYLING
+   ========================================================================== */
+
+#health-centres {
+    padding: 60px 0;
+    background-color: #f8fafc; /* Clean, light professional background tint */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-.services {
-    color: var(--secondary-color);
+#health-centres .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#health-centres h2 {
+    font-size: 2rem;
+    color: #002147; /* Deep corporate navy accent */
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+#health-centres .section-intro {
+    font-size: 1.1rem;
+    color: #4a5568; /* Slate gray subtitle text */
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.5;
+}
+
+/* --- Tab Filter Buttons Styling --- */
+.centres-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.centres-tabs .tab-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #4a5568;
+    background-color: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.centres-tabs .tab-btn:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+/* Active tab highlight matching the university page */
+.centres-tabs .tab-btn.active {
+    color: #ffffff;
+    background-color: #002147;
+    border-color: #002147;
+    box-shadow: 0 4px 6px -1px rgba(0, 33, 71, 0.2);
+}
+
+/* --- Cards Responsive Grid Layout --- */
+.centres-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* --- Individual Centre Card Styling --- */
+.centres-grid .centre-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.centres-grid .centre-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.centres-grid .centre-card h4 {
+    font-size: 1.25rem;
+    color: #002147;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+}
+
+.centres-grid .centre-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin: 0 0 16px 0;
+}
+
+/* Specialized medical services subtle text split line */
+.centres-grid .centre-card .services {
+    font-size: 0.85rem;
     font-weight: 500;
-    font-size: 13px;
-    margin-top: 10px;
+    color: #4a5568;
+    background-color: #f1f5f9;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* ============== QUICK FACTS ============== */
@@ -433,68 +546,97 @@ section h2 {
 }
 
 /* ============== TIMELINE / HISTORY ============== */
-.history-section {
-    background-color: var(--light-bg);
-} /*sets the background color of the entire history section using a custom variable*/
-
-.timeline {
-    position: relative;/*elements like markers and the vertical line can be absolutely positioned inside*/
-    padding: 20px 0;
+.timeline-section {
+    padding: 60px 0;
+    background-color: #ffffff;
 }
 
-.timeline::before { /*Creates the vertical line down the center*/
-    content: '';/*generates an empty pseudo-element*/
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    background: var(--primary-color);
-}
-
-.timeline-item {
-    margin-bottom: 40px;
-    width: 50%;
-}/**/
-
-.timeline-item:nth-child(odd) {/*Aligned to the left side.*/
-    margin-left: 0;
-    padding-right: 50px;
-    text-align: right;
-}/**/
-
-.timeline-item:nth-child(even) {/*Aligned to the right side.*/
-    margin-left: 50%;
-    padding-left: 50px;
-    text-align: left;
-}/**/
-
-.timeline-marker {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    background: var(--secondary-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-weight: bold;
-    z-index: 1;
-    margin-top: 0;
-}/**/
-
-.timeline-content h4 {
-    color: var(--primary-color);
+.timeline-section h2 {
+    font-size: 2rem;
+    color: #002147;
+    text-align: center;
     margin-bottom: 8px;
-    font-size: 18px;
-}/**/
+    font-weight: 700;
+}
+
+.timeline-section .section-sub {
+    font-size: 1.05rem;
+    color: #64748b;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Base Timeline Spine Container */
+.simple-timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 30px; /* Space for the tracking spine */
+}
+
+/* The continuous single vertical line */
+.simple-timeline::before {
+    content: '';
+    position: absolute;
+    left: 45px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background-color: #e2e8f0; /* Subtle line tint */
+}
+
+/* Individual Row Block */
+.timeline-item {
+    display: flex;
+    gap: 30px;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Date Pin Container */
+.timeline-meta {
+    min-width: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Minimalist Year Indicator Label */
+.timeline-meta .year-badge {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #002147;
+    background-color: #f1f5f9;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: 1px solid #cbd5e1;
+    text-align: center;
+}
+
+/* Text Detail Block Card */
+.timeline-content {
+    flex: 1;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f1f5f9; /* Flat separator instead of bulky borders */
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin: 0 0 6px 0;
+    font-weight: 600;
+}
 
 .timeline-content p {
-    color: var(--light-text);
-}/**/
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0;
+}
 
 /* ============== LEADERSHIP ============== */
 .leadership-section {
@@ -549,6 +691,22 @@ section h2 {
 .description {
     font-size: 14px;
     color: var(--light-text);
+}
+
+.news-img-placeholder {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.news-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* ============== ACCREDITATIONS ============== */
@@ -646,7 +804,9 @@ section h2 {
 
 /* ============== CONTACT SECTION ============== */
 .contact-section {
-    background-color: var(--light-bg);
+    background: rgb(24, 24, 135);
+    color: #fff;
+    padding: 4rem 0;
 }
 
 .contact-grid {
@@ -707,11 +867,14 @@ section h2 {
 
 .contact-form input,
 .contact-form textarea {
-    padding: 12px 15px;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    color: #fff;
     font-family: inherit;
-    font-size: 14px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
 }
 
 .contact-form input:focus,
@@ -731,9 +894,9 @@ section h2 {
 
 /* ============== FOOTER ============== */
 .footer {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 40px 20px 20px;
+    background: #1a1a1a;
+    color: rgba(255, 255, 255, 0.65);
+    padding: 3rem 0 0;
     text-align: center;
 }
 
@@ -767,133 +930,28 @@ section h2 {
 
 /* ============== RESPONSIVE DESIGN ============== */
 @media (max-width: 768px) {
-    /* Navigation */
-    .nav-menu {
-        display: none;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        right: 0;
-        background-color: var(--primary-color);
-        flex-direction: column;
-        padding: 20px;
-        gap: 10px;
-    }
+    .hero-content h1 { font-size: 32px; }
+    .hero-content p { font-size: 18px; }
+    section { padding: 50px 20px; }
+    section h2 { font-size: 32px; }
 
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    /* Hero */
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-content p {
-        font-size: 18px;
-    }
-
-    /* Sections */
-    section {
-        padding: 50px 20px;
-    }
-
-    section h2 {
-        font-size: 32px;
-    }
-
-    /* Timeline */
-    .timeline::before {
-        left: 20px;
-    }
-
+    .timeline::before { left: 20px; }
     .timeline-item {
         width: 100%;
         padding-left: 60px !important;
         text-align: left !important;
         margin-left: 0 !important;
     }
-
-    .timeline-marker {
-        left: 0;
-        transform: translateX(0);
-    }
-
-    /* Contact Form */
-    .contact-form {
-        grid-template-columns: 1fr;
-    }
-
-    /* Hospitals Grid */
-    .hospitals-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Facts Grid */
-    .facts-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Centers Tabs */
-    .centres-tabs {
-        flex-direction: column;
-    }
-
-    .tab-btn {
-        width: 100%;
-    }
+    .timeline-marker { left: 0; transform: translateX(0); }
+    .hospitals-grid { grid-template-columns: 1fr; }
+    .centres-tabs { flex-direction: column; }
+    .tab-btn { width: 100%; }
 }
 
 @media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-
-    section {
-        padding: 40px 15px;
-    }
-
-    section h2 {
-        font-size: 24px;
-    }
-
-    .nav-menu {
-        padding: 15px;
-    }
-
-    .hospitals-grid,
-    .centres-grid,
-    .news-grid,
-    .leadership-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .facts-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        padding: 60px 20px;
-        min-height: 400px;
-    }
-
-    .hero-content h1 {
-        font-size: 24px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
-
-    .contact-form {
-        padding: 20px;
-    }
-
-    .social-links {
-        font-size: 12px;
-    }
+    section h2 { font-size: 24px; }
+    .hospitals-grid, .centres-grid, .news-grid, .leadership-grid { grid-template-columns: 1fr; }
+    .hero { padding: 60px 20px; min-height: 400px; }
+    .hero-content h1 { font-size: 24px; }
+    .hero-content p { font-size: 16px; }
 }
