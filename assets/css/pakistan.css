@@ -136,6 +136,9 @@ a {
     opacity: 0.9;
 }
 
+.section {
+    padding: 4rem 2rem;
+}
 
 .services-section {
     background-color: var(--bg-light);
